@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const articles = [
+  {
+    title: 'Charleston SEO & LLM Optimization: A Local Business Guide',
+    description: 'How Charleston businesses can optimize for both traditional search engines and large language models. A practical guide to modern discoverability.',
+    href: '/articles/charleston-seo-llm-optimization',
+    date: '2025',
+    tags: ['SEO', 'LLM', 'Charleston'],
+  },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Resources - Page Sands',
+  description: 'Articles and resources on AI-first GTM strategy, SEO, LLM optimization, and demand generation.',
+  url: 'https://pagesands.com/resources',
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: articles.map((article, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: `https://pagesands.com${article.href}`,
+      name: article.title,
+    })),
+  },
+};
+---
+
+<BaseLayout
+  title="Resources - Page Sands | Articles on GTM, SEO & AI Strategy"
+  description="Articles and resources on AI-first GTM strategy, SEO, LLM optimization, and demand generation for growth-stage SaaS."
+  jsonLd={jsonLd}
+>
+  <!-- Hero -->
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
+    <div class="max-w-3xl">
+      <p class="text-sm font-medium uppercase tracking-widest text-muted-foreground">Resources</p>
+      <h1 class="mt-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        Articles &amp; Insights
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
+        Frameworks, strategies, and practical guides on AI-first GTM, SEO, LLM optimization, and growing technology companies.
+      </p>
+    </div>
+  </section>
+
+  <!-- Articles List -->
+  <section class="border-t border-border">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <div class="space-y-6">
+        {articles.map((article) => (
+          <a
+            href={article.href}
+            class="block rounded-lg border border-border p-6 transition-colors hover:bg-muted/40"
+          >
+            <div class="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+              <span>{article.date}</span>
+              {article.tags.map((tag) => (
+                <span class="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <h2 class="mt-2 text-xl font-semibold text-foreground">{article.title}</h2>
+            <p class="mt-2 text-muted-foreground">{article.description}</p>
+            <span class="mt-3 inline-block text-sm font-medium text-foreground underline underline-offset-4">
+              Read article &rarr;
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

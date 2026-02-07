@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Photography - Page Sands | Film Photography in Charleston, SC"
+  description="Film photography by Page Sands. 35mm, medium format, and large format. People, places, and urban landscapes from Charleston and beyond."
+  ogType="website"
+>
+  <!-- Hero -->
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
+    <div class="max-w-3xl">
+      <p class="text-sm font-medium uppercase tracking-widest text-muted-foreground">Film Photography</p>
+      <h1 class="mt-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        The Art of Wandering About
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
+        35mm, medium format, and large format film photography. Capturing people, places, and the urban landscape from Charleston, SC and beyond. A practice rooted in patience, intention, and the beauty of analog.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-4">
+        <a
+          href="https://artofwanderingabout.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+        >
+          Visit Full Portfolio &rarr;
+        </a>
+        <a
+          href="https://charlestonfilmphotography.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-md border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent"
+        >
+          Charleston Film Photography
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="border-t border-border bg-muted/40">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-foreground">Selected Work</h2>
+      <p class="mt-2 text-muted-foreground">A selection from recent rolls.</p>
+      <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+          <div class="group relative aspect-square overflow-hidden rounded-lg bg-muted">
+            <div class="flex h-full items-center justify-center text-muted-foreground text-sm">
+              <span>Photo {n}</span>
+            </div>
+            {/* Replace with actual images:
+            <img
+              src={`/images/photo-real-${n}.jpg`}
+              alt={`Film photograph ${n} by Page Sands`}
+              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            /> */}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections -->
+  <section class="border-t border-border">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-foreground">Collections</h2>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2">
+        <div class="rounded-lg border border-border p-6 transition-colors hover:bg-muted/40">
+          <h3 class="text-lg font-semibold text-foreground">Singles</h3>
+          <p class="mt-2 text-sm text-muted-foreground">Individual frames that stand on their own. Moments captured one click at a time.</p>
+        </div>
+        <div class="rounded-lg border border-border p-6 transition-colors hover:bg-muted/40">
+          <h3 class="text-lg font-semibold text-foreground">People</h3>
+          <p class="mt-2 text-sm text-muted-foreground">Portraits and candid moments. The human element through an analog lens.</p>
+        </div>
+        <div class="rounded-lg border border-border p-6 transition-colors hover:bg-muted/40">
+          <h3 class="text-lg font-semibold text-foreground">Places</h3>
+          <p class="mt-2 text-sm text-muted-foreground">Landscapes, architecture, and the spaces we inhabit. Charleston and beyond.</p>
+        </div>
+        <div class="rounded-lg border border-border p-6 transition-colors hover:bg-muted/40">
+          <h3 class="text-lg font-semibold text-foreground">Urban</h3>
+          <p class="mt-2 text-sm text-muted-foreground">City life, street scenes, and the rhythm of urban environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Find Me -->
+  <section class="border-t border-border bg-muted/40">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 text-center">
+      <h2 class="text-2xl font-bold tracking-tight text-foreground">See More</h2>
+      <p class="mt-2 text-muted-foreground">
+        Find my photography across the web.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a
+          href="https://www.instagram.com/pagesands/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-md border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent"
+        >
+          Instagram
+        </a>
+        <a
+          href="https://www.flickr.com/photos/page/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-md border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent"
+        >
+          Flickr
+        </a>
+        <a
+          href="https://artofwanderingabout.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-md border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent"
+        >
+          Art of Wandering About
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

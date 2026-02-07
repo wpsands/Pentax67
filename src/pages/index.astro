@@ -1,121 +1,203 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const posts = await getCollection('blog');
-const sorted = posts.sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Page Sands',
+    url: 'https://pagesands.com',
+    description: 'AI-first GTM strategist for growth-stage SaaS and film photographer.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Page Sands',
+    url: 'https://pagesands.com',
+    jobTitle: 'AI-First GTM Strategist',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'SandsDX',
+      url: 'https://www.sandsdx.com/',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Charleston',
+      addressRegion: 'SC',
+      addressCountry: 'US',
+    },
+    sameAs: [
+      'https://www.linkedin.com/in/wpsands/',
+      'https://www.instagram.com/pagesands/',
+      'https://www.flickr.com/photos/page/',
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is AI-first GTM?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'AI-first GTM means embedding AI agents and automation at the core of your go-to-market strategy — not bolting them on as an afterthought. It covers demand generation, pipeline operations, content, and analytics.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Who do you work with?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'I work with growth-stage SaaS companies, typically Series A through C, that are ready to scale their go-to-market operations with clarity, discipline, and speed.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is SandsDX?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'SandsDX is my AI-first GTM consulting practice. I help B2B teams scale by removing friction through simplicity and systems thinking.',
+        },
+      },
+    ],
+  },
+];
 ---
 
-<BaseLayout title="Pagini — Astro + MDX Blog">
-  <section class="hero">
-    <h1>Pagini</h1>
-    <p>A test site built with raw MDX in Astro Content Collections.</p>
+<BaseLayout
+  title="Page Sands - AI-First GTM Strategist & Film Photographer"
+  description="Helping technology companies grow with clarity, discipline, and speed. AI-first GTM strategy for growth-stage SaaS."
+  jsonLd={jsonLd}
+>
+  <!-- Hero -->
+  <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6 sm:py-28">
+    <div class="max-w-3xl">
+      <p class="text-sm font-medium uppercase tracking-widest text-muted-foreground">Charleston, SC</p>
+      <h1 class="mt-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+        AI-First GTM Strategist &amp; Film Photographer
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
+        Helping technology companies grow with clarity, discipline, and speed. I build go-to-market systems that scale — powered by AI agents, grounded in strategy.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a
+          href="/business"
+          class="inline-flex items-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+        >
+          Work With Me
+        </a>
+        <a
+          href="/photography"
+          class="inline-flex items-center rounded-md border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+        >
+          View Photography
+        </a>
+      </div>
+    </div>
   </section>
 
-  <section class="posts">
-    <h2>Blog Posts</h2>
-    <ul class="post-list">
-      {sorted.map((post) => (
-        <li class="post-card">
-          <a href={`/blog/${post.id}`}>
-            <h3>{post.data.title}</h3>
-            <p class="post-description">{post.data.description}</p>
-            <div class="post-meta">
-              <time datetime={post.data.pubDate.toISOString()}>
-                {post.data.pubDate.toLocaleDateString('en-us', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </time>
-              <div class="post-tags">
-                {post.data.tags.map((tag: string) => (
-                  <span class="tag">{tag}</span>
-                ))}
-              </div>
-            </div>
+  <!-- Current Work -->
+  <section class="border-t border-border bg-muted/40">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-foreground">What I Do</h2>
+      <p class="mt-2 text-muted-foreground">Two disciplines. One mindset: simplicity and systems thinking.</p>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2">
+        <div class="rounded-lg border border-border bg-background p-6 shadow-sm">
+          <div class="text-2xl">&#x1F680;</div>
+          <h3 class="mt-3 text-lg font-semibold text-foreground">AI-First GTM Strategy</h3>
+          <p class="mt-2 text-sm text-muted-foreground">
+            Founder &amp; Principal of SandsDX. I architect strategy, drive pipeline, and modernize GTM operations for growth-stage SaaS companies. Multi-channel demand programs, AI-driven workflows, and website experiences built for ABM.
+          </p>
+          <a href="/business" class="mt-4 inline-block text-sm font-medium text-foreground underline underline-offset-4 hover:text-foreground/80">
+            Learn more &rarr;
           </a>
-        </li>
-      ))}
-    </ul>
+        </div>
+        <div class="rounded-lg border border-border bg-background p-6 shadow-sm">
+          <div class="text-2xl">&#x1F4F7;</div>
+          <h3 class="mt-3 text-lg font-semibold text-foreground">Film Photography</h3>
+          <p class="mt-2 text-sm text-muted-foreground">
+            35mm, medium format, and large format film photography. Capturing people, places, and the urban landscape from Charleston and beyond. A practice rooted in patience and intention.
+          </p>
+          <a href="/photography" class="mt-4 inline-block text-sm font-medium text-foreground underline underline-offset-4 hover:text-foreground/80">
+            View gallery &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="border-t border-border">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold tracking-tight text-foreground">Frequently Asked Questions</h2>
+      <div class="mt-8 space-y-6">
+        <details class="group rounded-lg border border-border p-4">
+          <summary class="flex cursor-pointer items-center justify-between font-medium text-foreground">
+            What is AI-first GTM?
+            <span class="ml-2 transition-transform group-open:rotate-180">&#x25BC;</span>
+          </summary>
+          <p class="mt-3 text-sm text-muted-foreground">
+            AI-first GTM means embedding AI agents and automation at the core of your go-to-market strategy — not bolting them on as an afterthought. It covers demand generation, pipeline operations, content, and analytics.
+          </p>
+        </details>
+        <details class="group rounded-lg border border-border p-4">
+          <summary class="flex cursor-pointer items-center justify-between font-medium text-foreground">
+            Who do you work with?
+            <span class="ml-2 transition-transform group-open:rotate-180">&#x25BC;</span>
+          </summary>
+          <p class="mt-3 text-sm text-muted-foreground">
+            I work with growth-stage SaaS companies, typically Series A through C, that are ready to scale their go-to-market operations with clarity, discipline, and speed.
+          </p>
+        </details>
+        <details class="group rounded-lg border border-border p-4">
+          <summary class="flex cursor-pointer items-center justify-between font-medium text-foreground">
+            What is SandsDX?
+            <span class="ml-2 transition-transform group-open:rotate-180">&#x25BC;</span>
+          </summary>
+          <p class="mt-3 text-sm text-muted-foreground">
+            SandsDX is my AI-first GTM consulting practice. I help B2B teams scale by removing friction through simplicity and systems thinking.
+          </p>
+        </details>
+        <details class="group rounded-lg border border-border p-4">
+          <summary class="flex cursor-pointer items-center justify-between font-medium text-foreground">
+            Are you available for consulting?
+            <span class="ml-2 transition-transform group-open:rotate-180">&#x25BC;</span>
+          </summary>
+          <p class="mt-3 text-sm text-muted-foreground">
+            Yes. I take on a limited number of engagements at any time. <a href="/contact" class="underline underline-offset-2 hover:text-foreground">Get in touch</a> and let's discuss your goals.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="border-t border-border bg-muted/40">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 text-center">
+      <h2 class="text-2xl font-bold tracking-tight text-foreground">Stay in the Loop</h2>
+      <p class="mt-2 text-muted-foreground">
+        Get occasional updates on AI-first GTM strategy, frameworks, and tools.
+      </p>
+      <form
+        action="https://formspree.io/f/your-form-id"
+        method="POST"
+        class="mx-auto mt-6 flex max-w-md gap-3"
+      >
+        <input
+          type="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+          class="flex-1 rounded-md border border-input bg-background px-4 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+        />
+        <button
+          type="submit"
+          class="rounded-md bg-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
   </section>
 </BaseLayout>
-
-<style>
-  .hero {
-    text-align: center;
-    padding: 2rem 0;
-  }
-
-  .hero p {
-    color: #6b7280;
-    font-size: 1.1rem;
-  }
-
-  .posts h2 {
-    border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 0.5rem;
-  }
-
-  .post-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  .post-card {
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    transition: border-color 0.2s;
-  }
-
-  .post-card:hover {
-    border-color: #6366f1;
-  }
-
-  .post-card a {
-    display: block;
-    padding: 1.25rem;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .post-card h3 {
-    margin: 0 0 0.25rem;
-    color: #1a1a1a;
-  }
-
-  .post-description {
-    color: #6b7280;
-    margin: 0 0 0.75rem;
-    font-size: 0.95rem;
-  }
-
-  .post-meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    font-size: 0.85rem;
-    color: #9ca3af;
-  }
-
-  .post-tags {
-    display: flex;
-    gap: 0.35rem;
-  }
-
-  .tag {
-    background: #eef2ff;
-    color: #6366f1;
-    padding: 0.15rem 0.5rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-  }
-</style>

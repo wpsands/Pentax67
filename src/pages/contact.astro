@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact - Page Sands | Get in Touch"
+  description="Reach out to discuss AI-first GTM strategy, consulting engagements, photography, or collaboration opportunities."
+>
+  <!-- Hero -->
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
+    <div class="max-w-3xl">
+      <p class="text-sm font-medium uppercase tracking-widest text-muted-foreground">Contact</p>
+      <h1 class="mt-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        Get in Touch
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
+        Interested in working together? Have a question about AI-first GTM strategy? Want to discuss a photography project? Drop me a line.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="border-t border-border">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <div class="mx-auto max-w-xl">
+        <form
+          action="https://formspree.io/f/your-form-id"
+          method="POST"
+          class="space-y-6"
+        >
+          <div>
+            <label for="name" class="block text-sm font-medium text-foreground">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="mt-1 block w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              placeholder="Your name"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-foreground">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="mt-1 block w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div>
+            <label for="subject" class="block text-sm font-medium text-foreground">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              class="mt-1 block w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              placeholder="What's this about?"
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-foreground">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="mt-1 block w-full rounded-md border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-y"
+              placeholder="Tell me about your project or question..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alternative Contact -->
+  <section class="border-t border-border bg-muted/40">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 text-center">
+      <h2 class="text-xl font-semibold text-foreground">Other Ways to Connect</h2>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a
+          href="https://www.linkedin.com/in/wpsands/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-md border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://www.instagram.com/pagesands/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-md border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent"
+        >
+          Instagram
+        </a>
+        <a
+          href="https://www.sandsdx.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-md border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent"
+        >
+          SandsDX
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

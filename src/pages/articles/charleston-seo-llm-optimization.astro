@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Charleston SEO & LLM Optimization: A Local Business Guide',
+  description: 'How Charleston businesses can optimize for both traditional search engines and large language models.',
+  author: {
+    '@type': 'Person',
+    name: 'Page Sands',
+    url: 'https://pagesands.com',
+  },
+  publisher: {
+    '@type': 'Person',
+    name: 'Page Sands',
+  },
+  url: 'https://pagesands.com/articles/charleston-seo-llm-optimization',
+  datePublished: '2025-01-15',
+  dateModified: '2025-01-15',
+};
+---
+
+<BaseLayout
+  title="Charleston SEO & LLM Optimization: A Local Business Guide - Page Sands"
+  description="How Charleston businesses can optimize for both traditional search engines and large language models. A practical guide to modern discoverability."
+  jsonLd={jsonLd}
+  ogType="article"
+>
+  <article class="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
+    <header>
+      <div class="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+        <a href="/resources" class="hover:text-foreground transition-colors">&larr; Resources</a>
+        <span>&middot;</span>
+        <span>2025</span>
+        <span class="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">SEO</span>
+        <span class="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">LLM</span>
+        <span class="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">Charleston</span>
+      </div>
+      <h1 class="mt-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        Charleston SEO &amp; LLM Optimization: A Local Business Guide
+      </h1>
+      <p class="mt-4 text-lg text-muted-foreground">
+        The way people discover businesses is changing. Search engines still matter, but large language models like ChatGPT, Claude, and Perplexity are becoming a primary way people find answers. Here's how Charleston businesses can adapt.
+      </p>
+    </header>
+
+    <div class="prose-custom mt-12 space-y-8">
+      <section>
+        <h2 class="text-2xl font-bold text-foreground">The New Discovery Landscape</h2>
+        <p class="mt-3 text-muted-foreground leading-relaxed">
+          For years, local SEO has meant optimizing your Google Business Profile, building local citations, and earning backlinks from Charleston-area websites. That foundation still matters — but it's no longer the whole story.
+        </p>
+        <p class="mt-3 text-muted-foreground leading-relaxed">
+          AI-powered search and conversational assistants are reshaping how consumers find businesses. When someone asks an LLM "What's the best restaurant in downtown Charleston?" or "Who does commercial HVAC in Mount Pleasant?", the answer comes from a model's training data and retrieval systems — not from a traditional search results page.
+        </p>
+        <p class="mt-3 text-muted-foreground leading-relaxed">
+          This means your business needs to be discoverable in two ways: through traditional search engines <strong>and</strong> through the datasets and sources that LLMs use to generate answers.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-foreground">Traditional SEO Still Matters</h2>
+        <p class="mt-3 text-muted-foreground leading-relaxed">
+          Before you think about LLMs, make sure your local SEO fundamentals are solid:
+        </p>
+        <ul class="mt-4 space-y-2 text-muted-foreground">
+          <li class="flex gap-2"><span class="text-foreground font-medium">&#x2022;</span> <span><strong>Google Business Profile</strong> — Keep it complete, accurate, and regularly updated with posts and photos.</span></li>
+          <li class="flex gap-2"><span class="text-foreground font-medium">&#x2022;</span> <span><strong>Local citations</strong> — Consistent NAP (Name, Address, Phone) across directories, Yelp, TripAdvisor, and industry sites.</span></li>
+          <li class="flex gap-2"><span class="text-foreground font-medium">&#x2022;</span> <span><strong>Reviews</strong> — Actively encourage and respond to Google reviews. Volume and recency both matter.</span></li>
+          <li class="flex gap-2"><span class="text-foreground font-medium">&#x2022;</span> <span><strong>On-page SEO</strong> — Location-specific content, schema markup, and mobile-friendly design.</span></li>
+          <li class="flex gap-2"><span class="text-foreground font-medium">&#x2022;</span> <span><strong>Local backlinks</strong> — Partnerships with Charleston organizations, local press, and community involvement.</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-foreground">Optimizing for LLMs</h2>
+        <p class="mt-3 text-muted-foreground leading-relaxed">
+          LLM optimization is a newer discipline, but the principles are straightforward. You want to make your business easy for AI systems to understand, reference, and recommend.
+        </p>
+
+        <h3 class="mt-6 text-xl font-semibold text-foreground">1. Structured Data &amp; Schema Markup</h3>
+        <p class="mt-2 text-muted-foreground leading-relaxed">
+          Use JSON-LD schema markup to clearly define your business type, location, services, and contact information. This structured data is parsed by both search engines and AI retrieval systems.
+        </p>
+
+        <h3 class="mt-6 text-xl font-semibold text-foreground">2. Create an llms.txt File</h3>
+        <p class="mt-2 text-muted-foreground leading-relaxed">
+          Similar to robots.txt for search crawlers, an <code class="rounded bg-muted px-1.5 py-0.5 text-sm">llms.txt</code> file at your domain root provides AI crawlers with a structured overview of your site, its purpose, and key information. This is an emerging standard that helps AI systems understand your business.
+        </p>
+
+        <h3 class="mt-6 text-xl font-semibold text-foreground">3. Clear, Factual Content</h3>
+        <p class="mt-2 text-muted-foreground leading-relaxed">
+          LLMs favor content that is clear, factual, and well-organized. Write in a way that directly answers questions about your business. Think FAQ-style content, service pages with specific details, and about pages that clearly state who you are and what you do.
+        </p>
+
+        <h3 class="mt-6 text-xl font-semibold text-foreground">4. Be Present Where LLMs Train</h3>
+        <p class="mt-2 text-muted-foreground leading-relaxed">
+          LLMs learn from the open web. Having mentions on authoritative sources — Wikipedia, industry publications, local news, business directories, and review sites — increases the likelihood of being referenced in AI-generated answers.
+        </p>
+
+        <h3 class="mt-6 text-xl font-semibold text-foreground">5. Optimize for Conversational Queries</h3>
+        <p class="mt-2 text-muted-foreground leading-relaxed">
+          People ask AI assistants questions in natural language: "Where should I get my car fixed in West Ashley?" or "Best brunch spots near King Street." Make sure your content naturally addresses these kinds of conversational queries.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-foreground">A Charleston-Specific Approach</h2>
+        <p class="mt-3 text-muted-foreground leading-relaxed">
+          Charleston's business landscape is unique — a mix of tourism, hospitality, tech, healthcare, and professional services. Here are some Charleston-specific tips:
+        </p>
+        <ul class="mt-4 space-y-2 text-muted-foreground">
+          <li class="flex gap-2"><span class="text-foreground font-medium">&#x2022;</span> <span>Reference specific neighborhoods (King Street, Mount Pleasant, West Ashley, James Island, Summerville) in your content.</span></li>
+          <li class="flex gap-2"><span class="text-foreground font-medium">&#x2022;</span> <span>Get involved with local organizations like the Charleston Metro Chamber of Commerce, Charleston Digital Corridor, or Harbor Entrepreneur Center.</span></li>
+          <li class="flex gap-2"><span class="text-foreground font-medium">&#x2022;</span> <span>Earn mentions in local media: The Post and Courier, Charleston City Paper, Holy City Sinner, and Charleston Scene.</span></li>
+          <li class="flex gap-2"><span class="text-foreground font-medium">&#x2022;</span> <span>Partner with complementary local businesses for cross-referencing and backlinks.</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-foreground">The Bottom Line</h2>
+        <p class="mt-3 text-muted-foreground leading-relaxed">
+          SEO and LLM optimization aren't an either/or choice. The best strategy for Charleston businesses is to build a solid traditional SEO foundation and layer on LLM-friendly practices. Clear content, structured data, a strong local presence, and factual accuracy will serve you well in both worlds.
+        </p>
+        <p class="mt-3 text-muted-foreground leading-relaxed">
+          The businesses that adapt now will have a significant advantage as AI-powered discovery becomes the norm.
+        </p>
+      </section>
+    </div>
+
+    <footer class="mt-12 border-t border-border pt-8">
+      <a href="/resources" class="text-sm font-medium text-foreground underline underline-offset-4 hover:text-foreground/80">
+        &larr; Back to Resources
+      </a>
+    </footer>
+  </article>
+</BaseLayout>
