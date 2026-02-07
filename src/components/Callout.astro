@@ -1,0 +1,56 @@
+---
+interface Props {
+  type?: 'info' | 'warning' | 'tip';
+}
+
+const { type = 'info' } = Astro.props;
+
+const styles: Record<string, { bg: string; border: string; icon: string }> = {
+  info: { bg: '#e8f4fd', border: '#2196f3', icon: 'i' },
+  warning: { bg: '#fff8e1', border: '#ff9800', icon: '!' },
+  tip: { bg: '#e8f5e9', border: '#4caf50', icon: '*' },
+};
+
+const style = styles[type] ?? styles.info;
+---
+
+<div class={`callout callout-${type}`}>
+  <span class="callout-icon">{style.icon}</span>
+  <div class="callout-content">
+    <slot />
+  </div>
+</div>
+
+<style define:vars={{ bg: style.bg, border: style.border }}>
+  .callout {
+    display: flex;
+    gap: 0.75rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--border);
+    background: var(--bg);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .callout-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--border);
+    color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .callout-content {
+    flex: 1;
+  }
+
+  .callout-content :global(p) {
+    margin: 0;
+  }
+</style>
