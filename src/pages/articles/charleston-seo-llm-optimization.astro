@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { url } from '../../utils/base';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -30,7 +31,7 @@ const jsonLd = {
   <article class="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
     <header>
       <div class="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-        <a href="/resources" class="hover:text-foreground transition-colors">&larr; Resources</a>
+        <a href={url('/resources')} class="hover:text-foreground transition-colors">&larr; Resources</a>
         <span>&middot;</span>
         <span>2025</span>
         <span class="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">SEO</span>
@@ -130,7 +131,7 @@ const jsonLd = {
     </div>
 
     <footer class="mt-12 border-t border-border pt-8">
-      <a href="/resources" class="text-sm font-medium text-foreground underline underline-offset-4 hover:text-foreground/80">
+      <a href={url('/resources')} class="text-sm font-medium text-foreground underline underline-offset-4 hover:text-foreground/80">
         &larr; Back to Resources
       </a>
     </footer>

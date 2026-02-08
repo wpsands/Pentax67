@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { url } from '../utils/base';
 ---
 
 <BaseLayout
@@ -120,7 +121,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Let's talk about where you are and where you want to go.
       </p>
       <a
-        href="/contact"
+        href={url('/contact')}
         class="mt-6 inline-flex items-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
       >
         Get in Touch

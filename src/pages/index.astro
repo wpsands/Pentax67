@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { url } from '../utils/base';
 
 const jsonLd = [
   {
@@ -82,13 +83,13 @@ const jsonLd = [
       </p>
       <div class="mt-8 flex flex-wrap gap-4">
         <a
-          href="/business"
+          href={url('/business')}
           class="inline-flex items-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
         >
           Work With Me
         </a>
         <a
-          href="/photography"
+          href={url('/photography')}
           class="inline-flex items-center rounded-md border border-border bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
         >
           View Photography
@@ -109,7 +110,7 @@ const jsonLd = [
           <p class="mt-2 text-sm text-muted-foreground">
             Founder &amp; Principal of SandsDX. I architect strategy, drive pipeline, and modernize GTM operations for growth-stage SaaS companies. Multi-channel demand programs, AI-driven workflows, and website experiences built for ABM.
           </p>
-          <a href="/business" class="mt-4 inline-block text-sm font-medium text-foreground underline underline-offset-4 hover:text-foreground/80">
+          <a href={url('/business')} class="mt-4 inline-block text-sm font-medium text-foreground underline underline-offset-4 hover:text-foreground/80">
             Learn more &rarr;
           </a>
         </div>
@@ -119,7 +120,7 @@ const jsonLd = [
           <p class="mt-2 text-sm text-muted-foreground">
             35mm, medium format, and large format film photography. Capturing people, places, and the urban landscape from Charleston and beyond. A practice rooted in patience and intention.
           </p>
-          <a href="/photography" class="mt-4 inline-block text-sm font-medium text-foreground underline underline-offset-4 hover:text-foreground/80">
+          <a href={url('/photography')} class="mt-4 inline-block text-sm font-medium text-foreground underline underline-offset-4 hover:text-foreground/80">
             View gallery &rarr;
           </a>
         </div>
@@ -165,7 +166,7 @@ const jsonLd = [
             <span class="ml-2 transition-transform group-open:rotate-180">&#x25BC;</span>
           </summary>
           <p class="mt-3 text-sm text-muted-foreground">
-            Yes. I take on a limited number of engagements at any time. <a href="/contact" class="underline underline-offset-2 hover:text-foreground">Get in touch</a> and let's discuss your goals.
+            Yes. I take on a limited number of engagements at any time. <a href={url('/contact')} class="underline underline-offset-2 hover:text-foreground">Get in touch</a> and let's discuss your goals.
           </p>
         </details>
       </div>
