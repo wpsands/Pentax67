@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://pagesands.com/sitemap.xml
