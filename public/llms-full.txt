@@ -142,6 +142,42 @@ TTL prism: center-weighted, meter the important area, recompose. Handheld: Sekon
 
 ---
 
+## Repairing the Pentax 67
+
+A Pentax 67 is a mechanical camera built to last decades, but every mechanical system needs maintenance.
+
+### What a Full CLA Includes
+A qualified technician disassembles the camera, cleans degraded lubricants from the shutter mechanism and film transport, removes sticky stoppers from the mirror and shutter assemblies, replaces light seals and mirror bumper, applies fresh lubrication, and calibrates meter and shutter speeds to factory specifications. Budget $250–400 for a full CLA.
+
+### The Go-To Specialist: Eric Hendrickson at Pentaxs.com
+Eric Hendrickson (pentaxs.com) is a retired Pentax technician based in Tennessee who has been servicing Pentax 67 cameras since 1969. He took over Pentax's repair operation when they stopped — including their parts inventory. He is widely regarded as the most trusted specialist for this camera.
+
+- Free estimates — send your camera for evaluation at no cost
+- Models serviced: Pentax 6x7 (all versions) and Pentax 67 bodies and lenses
+- Does NOT service the Pentax 67II
+- Warranty: Six months on 67 bodies, one year on 35mm units and lenses
+- Contact: pentaxrepairs@aol.com
+- Turnaround: Typically 1–2 weeks based on community reports
+
+### 67II Repair Options
+Eric does not service the 67II due to its electronic shutter. Try Advance Camera Repair in Portland, OR. Nippon Photoclinic handles 67II on a case-by-case basis.
+
+### Common Repairs and Costs
+- Full CLA (body): $250–400 (send to specialist)
+- Light seal replacement: $15–25 DIY kit
+- Prism meter recalibration: part of CLA
+- Lens CLA: $75–150
+- Focusing screen replacement: $5–10, DIY-friendly
+
+### When to Send for Service
+- Just purchased used: always budget for a CLA
+- Mirror sticking: dried lubricant, needs CLA
+- Inconsistent shutter speeds: needs cleaning and recalibration
+- Meter drift: needs professional recalibration
+- Preventive maintenance: CLA every 5–10 years
+
+---
+
 ## Buying Guide
 
 ### Where to Buy
@@ -221,7 +257,7 @@ Q: Pentax 67 vs 67II — which should I buy?
 A: The 67II is the better camera (auto exposure, better grip, spot metering) but costs 3–4x more. For most shooters, the 67 or 6x7 MLU at $400–800 is the better value.
 
 Q: Where can I get a Pentax 67 repaired?
-A: Look for medium format specialists. Ask in r/AnalogCommunity or r/pentax67 for current recommendations. Budget $250–400 for CLA. Expect 4–12 week turnaround.
+A: For Pentax 6x7 and 67 bodies, Eric Hendrickson at pentaxs.com is the most trusted specialist — a retired Pentax tech with decades of experience and access to original parts. Free estimates, six-month warranty. For the 67II (which Eric does not service), try Advance Camera Repair in Portland, OR. Budget $250–400 for a CLA.
 
 Q: What film should I use in the Pentax 67?
 A: Start with Kodak Portra 400 (color) or Ilford HP5 Plus 400 (B&W). Both are forgiving, versatile, and look beautiful on 6x7 negatives.
