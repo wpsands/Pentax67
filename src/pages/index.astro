@@ -27,7 +27,7 @@ const siteUrl = 'https://wpsands.github.io/pagini';
 const faqEntries = [
   { q: 'Is the Pentax 67 worth it in 2026?', a: 'Yes. For under $1,000 (body + lens), you get 6x7cm negatives that rival medium format digital backs costing $10,000+. The lens lineup is the best in medium format. The main trade-offs are weight and 10 frames per roll.' },
   { q: 'Can you shoot the Pentax 67 handheld?', a: 'Yes, at 1/125s or faster. The camera weighs about 2.5kg with a prism and lens. The mass absorbs some vibration. Many photographers regularly handhold at 1/60s with sharp results. Use mirror lockup (MLU) even handheld for best results.' },
-  { q: 'What battery does the Pentax 67 use?', a: 'The 6x7 and 67 use a 6V 4SR44 (or 4LR44) battery for the metering prism only. The shutter is fully mechanical and works without a battery. The 67II uses a 6V 2CR-1/3N battery and the shutter is electronic (battery required to shoot).' },
+  { q: 'What battery does the Pentax 67 use?', a: 'The 6x7 and 67 use a 6V 4SR44 (or 4LR44) battery for the metering prism only. The shutter is fully mechanical and works without a battery. The 67II uses two 3V CR123A lithium batteries (6V total) and the shutter is electronic (battery required to shoot).' },
   { q: 'What is the difference between the Pentax 6x7 and 67?', a: 'Primarily branding and the metering prism. The 67 (1989) updated from CdS to SPD metering cells for better accuracy and faster response. The shutter, lens mount, film transport, and accessories are identical. The 6x7 MLU and 67 are functionally the same camera.' },
   { q: 'How many shots per roll on the Pentax 67?', a: '10 frames on a roll of 120 film. 21 frames on 220 film, but 220 is nearly impossible to find now. Plan on 10 frames per roll. At current prices, each frame costs roughly $1.50–3.00 with processing.' },
   { q: 'What is CLA and do I need one?', a: 'CLA stands for Clean, Lubricate, Adjust. A technician disassembles the camera, cleans old lubricant, applies fresh lubrication, replaces light seals, and calibrates shutter speeds and meter accuracy. Budget $250–400 for a CLA on any used Pentax 67 purchase. It is the single best investment in the camera\'s reliability.' },
@@ -37,7 +37,7 @@ const faqEntries = [
   { q: 'Pentax 67 vs 67II — which should I buy?', a: 'The 67II is the better camera with auto exposure, built-in grip, and spot metering, but costs 3–4x more ($1,500–2,500 vs $400–800). For most shooters, the Pentax 67 or 6x7 MLU is the better value. Put the price difference toward lenses and film.' },
   { q: 'Where can I get a Pentax 67 repaired?', a: 'Look for technicians who specialize in medium format or specifically Pentax 67 cameras. Ask in r/AnalogCommunity or r/pentax67 on Reddit for current recommendations. Budget $250–400 for a CLA. Expect 4–12 week turnaround from reputable technicians.' },
   { q: 'What film should I use in the Pentax 67?', a: 'For color: start with Kodak Portra 400 — gorgeous skin tones, wide exposure latitude, and fine grain on 6x7 negatives. For black and white: Ilford HP5 Plus 400 is versatile and pushes well. Both are forgiving stocks that look beautiful in medium format.' },
-  { q: 'Pentax 67 vs Mamiya RB67 — which is better?', a: 'Both are 6x7 SLR systems. The Mamiya RB67 has a rotating back and bellows focusing, making it better for studio work. The Pentax 67 handles more like a 35mm SLR with a larger lens selection, making it more versatile for field use and handheld shooting. The Pentax 67 lens lineup is significantly larger.' },
+  { q: 'Pentax 67 vs Mamiya RB67 — which is better?', a: 'Both are 6x7 SLR systems. The Mamiya RB67 has a rotating back and bellows focusing, making it better for studio work. The Pentax 67 handles more like a 35mm SLR with a larger lens selection, making it more versatile for field use and handheld shooting. Both systems have extensive lens lineups.' },
   { q: 'Can you use Pentax 67 lenses on digital cameras?', a: 'Pentax 67 lenses can be adapted to some digital mirrorless cameras (such as Sony E-mount, Fuji GFX, and others) using third-party adapters. On the Fuji GFX medium format digital system, the image circle covers the sensor well. Manual focus only. The 105mm f/2.4 is especially popular for adapted use.' },
   { q: 'How do you load film in a Pentax 67?', a: 'Open the film back via the latch on the left side. Place the fresh roll on the left spool, thread the backing paper leader into the take-up spool on the right. Align the arrow on the backing paper with the red dot on the body. Close the back and wind the advance lever until the counter reaches 1.' },
 ];
@@ -90,7 +90,7 @@ const jsonLd = [
     numberOfItems: 8,
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'SMC Pentax 67 105mm f/2.4', url: `${siteUrl}/#105mm`, description: '55mm equivalent. The defining lens of the system. Razor sharp wide open, beautiful bokeh. $400–700.' },
-      { '@type': 'ListItem', position: 2, name: 'SMC Pentax 67 75mm f/2.8', url: `${siteUrl}/#75mm`, description: '38mm equivalent. Extremely sharp, incredible value at $100–200.' },
+      { '@type': 'ListItem', position: 2, name: 'SMC Pentax 67 75mm f/4.5', url: `${siteUrl}/#75mm`, description: '38mm equivalent. Extremely sharp, incredible value at $100–200.' },
       { '@type': 'ListItem', position: 3, name: 'SMC Pentax 67 165mm f/2.8', url: `${siteUrl}/#165mm`, description: '85mm equivalent. Classic portrait focal length, gorgeous separation.' },
       { '@type': 'ListItem', position: 4, name: 'SMC Pentax 67 90mm f/2.8', url: `${siteUrl}/#90mm`, description: '46mm equivalent. Closer focus than 105mm, LS version for flash sync.' },
       { '@type': 'ListItem', position: 5, name: 'SMC Pentax 67 55mm f/4', url: `${siteUrl}/#55mm`, description: '28mm equivalent. True wide angle for 6x7 format.' },
@@ -316,16 +316,16 @@ const jsonLd = [
           <p class="text-sm text-slate-500 font-sans italic">Verdict: Buy this first. Period.</p>
           <ImagePlaceholder alt="Sample image: Portrait shot on Pentax 67 105mm f/2.4 wide open" caption="The 105mm f/2.4 wide open — the reason most people buy this camera." />
 
-          <h3 id="75mm" class="text-2xl font-bold mt-12 mb-3">75mm f/2.8</h3>
+          <h3 id="75mm" class="text-2xl font-bold mt-12 mb-3">75mm f/4.5</h3>
           <p class="text-base leading-relaxed mb-3">
-            The 75mm (38mm equivalent) is a wide-normal lens that is extremely sharp, even wide open. It is also absurdly cheap — often found for $100–200, making it the best value in the entire Pentax 67 system. At this price, there is no reason not to own one.
+            The 75mm (38mm equivalent) is a wide-normal lens that is extremely sharp, even stopped down just one stop. It is also absurdly cheap — often found for $100–200, making it the best value in the entire Pentax 67 system. At this price, there is no reason not to own one. (Note: Pentax also made a rare 75mm f/2.8 AL with an aspherical element — a different, much more expensive lens.)
           </p>
           <p class="text-base leading-relaxed mb-3">
             This focal length is versatile. It works beautifully for environmental portraits where you want to include the subject's surroundings. It is a natural fit for street photography, travel, and landscapes. The slightly wide perspective on the 6x7 frame gives images a sense of place without the distortion of a true wide angle. Pair it with the 105mm and you have a two-lens kit that covers 90% of shooting situations.
           </p>
           <ul class="space-y-2 text-base mb-4 ml-4">
             <li class="flex gap-2"><span class="text-warm">—</span> 38mm equivalent. Wide-normal.</li>
-            <li class="flex gap-2"><span class="text-warm">—</span> Extremely sharp, even wide open</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Extremely sharp stopped down, very good wide open</li>
             <li class="flex gap-2"><span class="text-warm">—</span> $100–200 — incredible value</li>
             <li class="flex gap-2"><span class="text-warm">—</span> Great for environmental portraits, street, landscapes</li>
           </ul>
@@ -382,7 +382,7 @@ const jsonLd = [
 
           <h3 id="165mm" class="text-2xl font-bold mt-12 mb-3">165mm f/2.8</h3>
           <p class="text-base leading-relaxed mb-3">
-            The 85mm equivalent — the classic portrait focal length. At f/2.8 on the 6x7 format, the depth of field is paper-thin. Backgrounds dissolve into pure cream. The rendering is gorgeous, and if portraits are your primary subject, this lens will make you very happy. An LS (leaf shutter) version also exists for studio flash work.
+            The 85mm equivalent — the classic portrait focal length. At f/2.8 on the 6x7 format, the depth of field is paper-thin. Backgrounds dissolve into pure cream. The rendering is gorgeous, and if portraits are your primary subject, this lens will make you very happy. Pentax also made a separate 165mm f/4 LS (leaf shutter) version for studio flash sync at all shutter speeds — a different, slower lens.
           </p>
           <p class="text-base leading-relaxed mb-3">
             The trade-off is size and weight. This is a large, heavy lens that adds significant heft to an already heavy camera. And honestly, the <a href="#105mm">105mm f/2.4</a> gets you 90% of the way there at half the price and weight. The 165mm is the premium choice for dedicated portrait shooters.
@@ -390,7 +390,7 @@ const jsonLd = [
           <ul class="space-y-2 text-base mb-4 ml-4">
             <li class="flex gap-2"><span class="text-warm">—</span> 85mm equivalent. Classic portrait focal length.</li>
             <li class="flex gap-2"><span class="text-warm">—</span> Gorgeous separation at f/2.8. Large and heavy.</li>
-            <li class="flex gap-2"><span class="text-warm">—</span> LS version available for flash sync</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Separate 165mm f/4 LS available for flash sync</li>
           </ul>
           <p class="text-sm text-slate-500 font-sans italic">Verdict: Premium portrait lens. The 105mm does 90% of what this does at half the price and weight.</p>
 
@@ -407,7 +407,7 @@ const jsonLd = [
           <h3 id="lens-buying-guide" class="text-2xl font-bold mt-12 mb-4">Which Lenses to Buy First</h3>
           <ol class="space-y-3 text-base ml-4 list-decimal list-inside">
             <li><strong>Start with the 105mm f/2.4.</strong> Non-negotiable. This is the lens that defines the system.</li>
-            <li><strong>Add the 75mm f/2.8</strong> for wide work. At $100–200, it is the best value in medium format glass.</li>
+            <li><strong>Add the 75mm f/4.5</strong> for wide work. At $100–200, it is the best value in medium format glass.</li>
             <li><strong>If you shoot portraits primarily,</strong> consider the 165mm f/2.8 or <a href="#90mm">90mm f/2.8</a> as a third lens.</li>
             <li><strong>The 55mm f/4</strong> if you need true wide angle for landscapes or architecture.</li>
             <li><strong>Everything else is specialized.</strong> Buy as your work demands.</li>
@@ -726,7 +726,7 @@ const jsonLd = [
                   <tr><td class="font-semibold text-slate-200">Type</td><td>SLR (35mm-style)</td><td>SLR (modular system)</td></tr>
                   <tr><td class="font-semibold text-slate-200">Rotating back</td><td class="text-red-400">No</td><td class="text-green-400">Yes</td></tr>
                   <tr><td class="font-semibold text-slate-200">Bellows focus</td><td class="text-red-400">No</td><td class="text-green-400">Yes</td></tr>
-                  <tr><td class="font-semibold text-slate-200">Lens selection</td><td class="text-green-400">20+ lenses</td><td>~15 lenses</td></tr>
+                  <tr><td class="font-semibold text-slate-200">Lens selection</td><td class="text-green-400">20+ lenses</td><td>25+ lenses</td></tr>
                   <tr><td class="font-semibold text-slate-200">Handheld use</td><td class="text-green-400">Practical</td><td>Difficult (heavier)</td></tr>
                   <tr><td class="font-semibold text-slate-200">Best for</td><td>Field, travel, portraits</td><td>Studio, tripod work</td></tr>
                 </tbody>
@@ -739,7 +739,7 @@ const jsonLd = [
             The Hasselblad 500C/M shoots 6x6cm (square format) — a smaller negative than the Pentax 67's 6x7cm. The Hasselblad is a fully modular system with interchangeable film backs, viewfinders, and lenses. It is significantly lighter and more compact. The Zeiss lenses are legendary for their rendering.
           </p>
           <p class="text-base leading-relaxed mb-4">
-            The Pentax 67 gives you a larger negative (roughly 25% more area than 6x6), handles more intuitively for 35mm shooters, and has a much larger lens lineup at lower prices. The Hasselblad wins on portability, modularity, and the ability to swap film backs mid-roll. Both are excellent systems — the choice comes down to whether you value negative size and handling (Pentax) or modularity and compactness (Hasselblad).
+            The Pentax 67 gives you a larger negative (roughly 20% more area than 6x6), handles more intuitively for 35mm shooters, and has a much larger lens lineup at lower prices. The Hasselblad wins on portability, modularity, and the ability to swap film backs mid-roll. Both are excellent systems — the choice comes down to whether you value negative size and handling (Pentax) or modularity and compactness (Hasselblad).
           </p>
 
           <h3 class="text-2xl font-bold mt-10 mb-3">Pentax 67 vs Mamiya 7</h3>
@@ -747,7 +747,7 @@ const jsonLd = [
             The Mamiya 7 is a 6x7 rangefinder — not an SLR. It is dramatically lighter and more portable. No mirror slap means no vibration issues. The lenses are multicoated and extremely sharp. It is the camera you take when you want 6x7 negatives without the weight penalty.
           </p>
           <p class="text-base leading-relaxed mb-4">
-            The trade-offs: limited lens selection (only 4 lenses), no SLR viewing (you're looking through a rangefinder window, not through the lens), no close-focus capability, and no interchangeable viewfinders. The Mamiya 7 is a focused tool for landscapes and travel. The Pentax 67 is a versatile system for everything from portraits to macro to architecture.
+            The trade-offs: limited lens selection (only 6 lenses, from 43mm to 210mm), no SLR viewing (you're looking through a rangefinder window, not through the lens), no close-focus capability, and no interchangeable viewfinders. The Mamiya 7 is a focused tool for landscapes and travel. The Pentax 67 is a versatile system for everything from portraits to macro to architecture.
           </p>
 
           <h3 class="text-2xl font-bold mt-10 mb-3">Pentax 67 vs Fuji GW690 ("Texas Leica")</h3>
@@ -783,7 +783,7 @@ const jsonLd = [
             </div>
             <div class="border-l-2 border-warm/40 pl-5">
               <dt class="font-sans font-semibold text-slate-100 text-base">6x7 Format</dt>
-              <dd class="mt-1 text-sm text-slate-400 leading-relaxed">A medium format negative measuring approximately 56mm × 69mm. Roughly 4.5 times the area of a 35mm frame and about 25% larger than 6x6cm (Hasselblad). The rectangular aspect ratio is close to 5:4, matching standard print proportions with minimal cropping.</dd>
+              <dd class="mt-1 text-sm text-slate-400 leading-relaxed">A medium format negative measuring approximately 56mm × 69mm. Roughly 4.5 times the area of a 35mm frame and about 20% larger than 6x6cm (Hasselblad). The rectangular aspect ratio is close to 5:4, matching standard print proportions with minimal cropping.</dd>
             </div>
             <div class="border-l-2 border-warm/40 pl-5">
               <dt class="font-sans font-semibold text-slate-100 text-base">CdS vs SPD Metering Cells</dt>
@@ -791,7 +791,7 @@ const jsonLd = [
             </div>
             <div class="border-l-2 border-warm/40 pl-5">
               <dt class="font-sans font-semibold text-slate-100 text-base">LS (Leaf Shutter) Lenses</dt>
-              <dd class="mt-1 text-sm text-slate-400 leading-relaxed">Certain Pentax 67 lenses (90mm f/2.8 LS, 165mm f/2.8 LS) have a built-in leaf shutter that allows flash synchronization at all shutter speeds. Standard focal-plane shutter bodies sync flash only at 1/30s or slower. The LS lenses are essential for studio strobe work.</dd>
+              <dd class="mt-1 text-sm text-slate-400 leading-relaxed">Certain Pentax 67 lenses (90mm f/2.8 LS, 165mm f/4 LS) have a built-in leaf shutter that allows flash synchronization at all shutter speeds. Standard focal-plane shutter bodies sync flash only at 1/30s or slower. The LS lenses are essential for studio strobe work.</dd>
             </div>
             <div class="border-l-2 border-warm/40 pl-5">
               <dt class="font-sans font-semibold text-slate-100 text-base">Takumar vs SMC Pentax Lenses</dt>
@@ -811,7 +811,7 @@ const jsonLd = [
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <ImagePlaceholder alt="Sample: Lowcountry marsh at golden hour — 105mm f/2.4, Portra 400" aspectRatio="4/5" />
             <ImagePlaceholder alt="Sample: Portrait — 105mm f/2.4 wide open, Portra 800" aspectRatio="4/5" />
-            <ImagePlaceholder alt="Sample: Oak alley — 75mm f/2.8, Ektar 100" aspectRatio="4/5" />
+            <ImagePlaceholder alt="Sample: Oak alley — 75mm f/4.5, Ektar 100" aspectRatio="4/5" />
             <ImagePlaceholder alt="Sample: Beach scene — 55mm f/4, Portra 160" aspectRatio="4/5" />
             <ImagePlaceholder alt="Sample: Downtown Charleston — 45mm f/4, Tri-X 400" aspectRatio="4/5" />
             <ImagePlaceholder alt="Sample: Detail shot — 135mm f/4 Macro, Delta 100" aspectRatio="4/5" />

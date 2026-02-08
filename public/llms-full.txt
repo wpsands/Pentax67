@@ -53,8 +53,8 @@ The Pentax 67 lens lineup is the largest in medium format, with 20+ focal length
 ### 105mm f/2.4 (55mm equivalent)
 The defining lens of the system. Razor sharp wide open, beautiful bokeh, distinctive orange-red flare orb in backlight. Three versions exist (latest has best coatings). Minimum focus: 39 inches. Price: $400–700. Buy this first.
 
-### 75mm f/2.8 (38mm equivalent)
-Wide-normal. Extremely sharp, even wide open. Often $100–200 — the best value in the entire system. Great for environmental portraits, street, landscapes. Buy this second.
+### 75mm f/4.5 (38mm equivalent)
+Wide-normal. Extremely sharp stopped down. Often $100–200 — the best value in the entire system. Great for environmental portraits, street, landscapes. Buy this second. (A rare 75mm f/2.8 AL with aspherical element also exists but is far more expensive.)
 
 ### 55mm f/4 (28mm equivalent)
 True wide angle. Slower at f/4 but sharp across the frame stopped down. Some barrel distortion at edges.
@@ -69,15 +69,15 @@ Closer minimum focus (25 inches) than the 105mm. Strong alternative for portrait
 True macro capability. Excellent for product photography, still life, tight portraits.
 
 ### 165mm f/2.8 (85mm equivalent)
-Classic portrait focal length. Paper-thin DOF at f/2.8 on 6x7. Gorgeous but heavy. LS version available. The 105mm does 90% of this at half the price.
+Classic portrait focal length. Paper-thin DOF at f/2.8 on 6x7. Gorgeous but heavy. A separate 165mm f/4 LS (leaf shutter) version exists for studio flash sync. The 105mm does 90% of this at half the price.
 
 ### 200mm f/4 (100mm equivalent)
 Telephoto. Solid performer, not essential for most kits.
 
 ### Lens Buying Priority
 1. 105mm f/2.4 (non-negotiable)
-2. 75mm f/2.8 ($100–200, incredible value)
-3. 165mm f/2.8 or 90mm f/2.8 for portrait work
+2. 75mm f/4.5 ($100–200, incredible value)
+3. 165mm f/2.8 or 90mm f/2.8 for portrait work (165mm f/4 LS for studio flash)
 4. 55mm f/4 for wide angle
 5. Everything else as needed
 
@@ -181,7 +181,7 @@ Both are 6x7 SLR systems. The Mamiya has a rotating back (portrait/landscape wit
 Hasselblad shoots 6x6 (square). Smaller negative than 6x7. Modular system with interchangeable backs, lenses, and viewfinders. The Hasselblad is lighter and more compact. The Pentax 67 gives a larger negative and handles more intuitively for 35mm shooters.
 
 ### vs Mamiya 7
-The Mamiya 7 is a rangefinder, not an SLR. Much lighter and more portable. No mirror slap. But no SLR viewing, limited lens selection, and no interchangeable viewfinders. If weight matters, the Mamiya 7 wins. If versatility and lens selection matter, the Pentax 67 wins.
+The Mamiya 7 is a rangefinder, not an SLR. Much lighter and more portable. No mirror slap. But no SLR viewing, limited lens selection (6 lenses from 43mm to 210mm), and no interchangeable viewfinders. If weight matters, the Mamiya 7 wins. If versatility and lens selection matter, the Pentax 67 wins.
 
 ### vs Fuji GW690
 The "Texas Leica." A fixed-lens 6x9 rangefinder. Shoots an even larger negative but has no interchangeable lenses and no metering. Extremely simple and reliable. A different kind of camera for a different workflow.
@@ -197,7 +197,7 @@ Q: Can you shoot the Pentax 67 handheld?
 A: Yes, at 1/125s or faster. The mass absorbs some vibration. Use MLU even handheld.
 
 Q: What battery does the Pentax 67 use?
-A: The 6x7 and 67 use a 6V 4SR44 battery for the meter only. The shutter is mechanical. The 67II uses 2CR-1/3N and requires a battery to fire.
+A: The 6x7 and 67 use a 6V 4SR44 battery for the meter only. The shutter is mechanical. The 67II uses two 3V CR123A lithium batteries (6V total) and requires a battery to fire.
 
 Q: What is the difference between the Pentax 6x7 and 67?
 A: Primarily the metering prism (CdS vs SPD cells). Same shutter, lens mount, and accessories.

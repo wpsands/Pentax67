@@ -15,7 +15,7 @@ A comprehensive, field-tested guide covering the entire Pentax 67 camera system.
 ## Topics Covered
 
 - Camera Versions: Asahi Pentax 6x7 (1969), 6x7 MLU (1976), Pentax 67 (1989), Pentax 67II (1998)
-- Lens System: 9 lenses reviewed including 105mm f/2.4, 75mm f/2.8, 55mm f/4, 45mm f/4, 90mm f/2.8, 135mm f/4 Macro, 165mm f/2.8, 200mm f/4
+- Lens System: 9 lenses reviewed including 105mm f/2.4, 75mm f/4.5, 55mm f/4, 45mm f/4, 90mm f/2.8, 135mm f/4 Macro, 165mm f/2.8, 200mm f/4
 - Viewfinders: Waist-level finder, TTL metering prism, AE prism (67II)
 - Film: Color negative, black and white, and slide film recommendations for 120 format
 - Shooting Tips: Loading film, metering, handheld technique, tripod workflow, focusing
