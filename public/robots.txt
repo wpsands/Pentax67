@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wpsands.github.io/pagini/sitemap-index.xml

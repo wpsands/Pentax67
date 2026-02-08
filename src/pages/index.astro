@@ -1,7 +1,715 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import ImagePlaceholder from '../components/ImagePlaceholder.astro';
+
+const title = 'Pentax 67: The Complete Guide to the Pentax 67 System';
+const description = 'Everything you need to shoot the Pentax 67. Camera versions compared, every lens reviewed, film recommendations, troubleshooting, and field-tested tips from a working Pentax 6x7 shooter.';
+
+const sections = [
+  { id: 'versions', label: 'Camera Versions' },
+  { id: 'lenses', label: 'Lens System' },
+  { id: 'viewfinders', label: 'Viewfinders & Prisms' },
+  { id: 'film', label: 'Film Recommendations' },
+  { id: 'shooting-tips', label: 'Shooting Tips' },
+  { id: 'accessories', label: 'Essential Accessories' },
+  { id: 'troubleshooting', label: 'Troubleshooting' },
+  { id: 'buying-guide', label: 'Buying Guide' },
+  { id: 'sample-images', label: 'Sample Images' },
+  { id: 'faq', label: 'FAQ' },
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    author: { '@type': 'Person', name: 'Page Sands', url: 'https://pagesands.com' },
+    datePublished: '2026-02-08',
+    dateModified: '2026-02-08',
+    publisher: { '@type': 'Person', name: 'Page Sands' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Is the Pentax 67 worth it in 2026?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes. For under $1,000 (body + lens), you get 6x7 negatives that rival medium format digital backs costing $10,000+. The lens lineup is the best in medium format. The main trade-off is weight and 10 frames per roll.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can you shoot the Pentax 67 handheld?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes, at 1/125s or faster. The camera is heavy but the mass absorbs some vibration. Many photographers regularly handhold at 1/60s with sharp results. Use MLU even handheld for best results.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'What battery does the Pentax 67 use?',
+        acceptedAnswer: { '@type': 'Answer', text: 'The 6x7 and 67 use a 6V 4SR44 (or 4LR44) battery for the metering prism only. The shutter is fully mechanical and works without a battery. The 67II uses a 6V 2CR-1/3N battery and the shutter is electronic (battery required to shoot).' },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the difference between the Pentax 6x7 and 67?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Primarily branding and the metering prism. The 67 (1989) updated from CdS to SPD metering cells for better accuracy. The shutter, lens mount, and accessories are identical.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'How many shots per roll on the Pentax 67?',
+        acceptedAnswer: { '@type': 'Answer', text: '10 frames on a roll of 120 film. 21 frames on 220 film (220 is nearly impossible to find now).' },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is CLA and do I need one?',
+        acceptedAnswer: { '@type': 'Answer', text: 'CLA stands for Clean, Lubricate, Adjust. It is a professional service where a technician disassembles the camera, cleans old lubricant, applies fresh lubrication, and calibrates shutter speeds and meter accuracy. If you are buying a used Pentax 67, budget $250-400 for a CLA.' },
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wpsands.github.io/pagini/' },
+      { '@type': 'ListItem', position: 2, name: 'Pentax 67 Complete Guide' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Pentax 67 Resources',
+    url: 'https://wpsands.github.io/pagini/',
+  },
+];
 ---
 
-<BaseLayout title="Hello World">
-  <h1 class="text-4xl font-bold">Hello World</h1>
+<BaseLayout title={title} description={description} jsonLd={jsonLd} type="article">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="flex gap-12">
+      <TableOfContents sections={sections} />
+
+      <article class="flex-1 min-w-0 max-w-3xl mx-auto lg:mx-0">
+
+        <!-- Hero -->
+        <header class="mb-16">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+            The Complete Guide to the <span class="text-warm">Pentax 67</span>
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
+            The Pentax 67 is one of the most iconic medium format SLR systems ever made. Introduced in 1969 and produced for nearly four decades, it combines 6x7cm negatives with familiar 35mm SLR handling. This guide covers every version of the camera, the full lens lineup, film recommendations, common issues and repairs, and practical shooting tips from thousands of rolls of real-world use.
+          </p>
+          <ImagePlaceholder alt="Hero: Pentax 6x7 with 105mm f/2.4 lens, TTL prism, wooden grip" caption="The Pentax 6x7 with 105mm f/2.4 — the definitive medium format kit." />
+        </header>
+
+        <!-- ============================================================ -->
+        <!-- VERSIONS -->
+        <!-- ============================================================ -->
+        <section id="versions" class="scroll-mt-20 mb-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 border-b border-warm/20 pb-4">Camera Versions Compared</h2>
+          <p class="text-base leading-relaxed mb-8">
+            There are four distinct versions of the Pentax 67. All share the same lens mount and most accessories, but there are important differences in features, reliability, and price. Understanding these differences matters because it directly affects what you pay, what lenses meter correctly, and whether you get mirror lockup — which is essential for sharp results with a camera this heavy.
+          </p>
+
+          <h3 id="asahi-pentax-6x7" class="text-2xl font-bold mt-12 mb-3">Asahi Pentax 6x7 <span class="text-slate-500 font-sans text-base font-normal">(1969–1976)</span></h3>
+          <p class="text-base leading-relaxed mb-3">
+            The original. Marked "6X7" on the body, this is where the legend started. Asahi Optical (later Pentax) designed a medium format camera that handled like a big 35mm SLR at a time when most medium format cameras were either TLRs or rangefinders. The fully mechanical shutter runs from 1 second to 1/1000s plus Bulb, and it fires without batteries — the CdS metering prism is the only component that needs power.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            The critical limitation is the lack of mirror lockup. The Pentax 67's mirror is massive — it has to clear a 6x7cm film gate — and it creates substantial vibration when it fires. Without MLU, you are at the mercy of mirror slap at shutter speeds between about 1/8s and 1/30s. Handheld this matters less (your body absorbs it), but on a tripod it can visibly soften images. At today's prices ($300–600 body only), the original 6x7 is only worth buying if it is significantly cheaper than the MLU version.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> Fully mechanical shutter (1s to 1/1000s + Bulb)</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> No mirror lockup</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> CdS metering prism available (battery-dependent for meter only)</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Heaviest version, older repair parts harder to source</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Price range: $300–600 body only</li>
+          </ul>
+          <p class="text-sm text-slate-500 font-sans italic">Verdict: Avoid unless it is your only option. No MLU is a real limitation for a camera this heavy.</p>
+          <ImagePlaceholder alt="Asahi Pentax 6x7 front view showing 6X7 branding" />
+
+          <h3 id="6x7-mlu" class="text-2xl font-bold mt-12 mb-3">Pentax 6x7 MLU <span class="text-slate-500 font-sans text-base font-normal">(1976–1989)</span></h3>
+          <p class="text-base leading-relaxed mb-3">
+            In 1976, Asahi addressed the single biggest complaint about the 6x7 by adding a mirror lockup switch — a small sliding lever on the right side of the body, just behind the lens mount. Flip it up, fire the shutter once to lock the mirror, then fire again to expose. Everything else about the camera is identical to the original 6x7.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            This one addition transforms the camera. On a tripod with MLU engaged and a cable release, the Pentax 6x7 MLU delivers results as sharp as anything in medium format. And because the "MLU" designation is less glamorous than the later "67" rebrand, these bodies often sell for less despite being functionally identical to the Pentax 67. It is the best value in the entire system.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> Added mirror lockup via sliding switch</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Functionally identical to the later Pentax 67</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Same CdS metering prism as original</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Best value in the system: same capabilities at lower prices</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Price range: $350–700 body only</li>
+          </ul>
+          <p class="text-sm text-slate-500 font-sans italic">Verdict: Best bang for the buck. Functionally identical to the Pentax 67.</p>
+          <ImagePlaceholder alt="Pentax 6x7 MLU showing mirror lockup switch" />
+
+          <h3 id="pentax-67" class="text-2xl font-bold mt-12 mb-3">Pentax 67 <span class="text-slate-500 font-sans text-base font-normal">(1989–1998)</span></h3>
+          <p class="text-base leading-relaxed mb-3">
+            The 1989 refresh was primarily cosmetic — the "6X7" branding became "67" — but the important change was under the prism. Pentax switched from CdS (Cadmium Sulfide) metering cells to SPD (Silicon Photo Diode) cells. CdS cells are slow to respond, especially in low light, and they suffer from memory effect where a bright reading can temporarily skew subsequent readings. SPD cells respond instantly and don't have that problem.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            The mechanical shutter, lens mount, and body design are all carried over from the 6x7 MLU. Minor manufacturing improvements mean 67-era bodies tend to be slightly more reliable, but the difference is marginal. If you find a clean 6x7 MLU for less than a 67, take the MLU. If prices are similar, take the 67 for the better metering.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> Improved SPD metering prism (better low-light accuracy)</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Same mechanical shutter and lens compatibility</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Minor reliability improvements from newer manufacturing</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Sweet spot of reliability and value</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Price range: $400–800 body only</li>
+          </ul>
+          <p class="text-sm text-slate-500 font-sans italic">Verdict: The sweet spot. Newer manufacturing, improved metering, same great system.</p>
+          <ImagePlaceholder alt="Pentax 67 front view showing 67 branding" />
+
+          <h3 id="pentax-67ii" class="text-2xl font-bold mt-12 mb-3">Pentax 67II <span class="text-slate-500 font-sans text-base font-normal">(1998–2009)</span></h3>
+          <p class="text-base leading-relaxed mb-3">
+            The 67II is a genuine redesign, not just a rebrand. Pentax added a built-in right-hand grip that dramatically improves handling, a top LCD panel showing exposure settings, and an AE prism with aperture priority auto exposure and selectable metering modes (center-weighted and spot). The shutter is now electronic with expanded speeds (added 2s and 4s), and the camera supports intentional double exposures.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            The catch: the electronic shutter means the 67II requires a battery to fire. If the battery dies in the field, the camera is dead. The earlier mechanical bodies fire without any battery at all. The other catch is price — 67II bodies command $1,500–2,500, which is 3–4x the price of a 67 or 6x7 MLU. That price gap buys a lot of film and processing.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            The 67II is genuinely the best camera in the system. Aperture priority exposure, spot metering, and the improved grip make it a significantly better handheld shooting experience. If you shoot handheld more than tripod, or if the convenience of auto exposure is important to your workflow, the 67II earns its premium.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> Built-in right-hand grip, top LCD panel</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> AE prism with aperture priority auto exposure</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Selectable metering modes (center-weighted, spot)</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Electronic shutter with expanded speeds (battery required)</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Double exposure capability</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Price range: $1,500–2,500 body only</li>
+          </ul>
+          <p class="text-sm text-slate-500 font-sans italic">Verdict: The best camera in the system, but 3–4x the price. Worth it if you shoot handheld frequently or want aperture priority.</p>
+          <ImagePlaceholder alt="Pentax 67II showing built-in grip and top LCD" />
+
+          <h3 id="which-to-buy" class="text-2xl font-bold mt-12 mb-4">Which Version Should You Buy?</h3>
+          <div class="overflow-x-auto -mx-4 sm:mx-0 mb-6">
+            <div class="min-w-[600px] px-4 sm:px-0">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>6x7</th>
+                    <th>6x7 MLU</th>
+                    <th>67</th>
+                    <th>67II</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="font-semibold text-slate-200">Years</td><td>1969–1976</td><td>1976–1989</td><td>1989–1998</td><td>1998–2009</td></tr>
+                  <tr><td class="font-semibold text-slate-200">MLU</td><td class="text-red-400">No</td><td class="text-green-400">Yes</td><td class="text-green-400">Yes</td><td class="text-green-400">Yes</td></tr>
+                  <tr><td class="font-semibold text-slate-200">Metering</td><td>CdS prism</td><td>CdS prism</td><td>SPD prism</td><td>AE prism</td></tr>
+                  <tr><td class="font-semibold text-slate-200">Auto exposure</td><td class="text-red-400">No</td><td class="text-red-400">No</td><td class="text-red-400">No</td><td class="text-green-400">Aperture priority</td></tr>
+                  <tr><td class="font-semibold text-slate-200">Double exposure</td><td class="text-red-400">No</td><td class="text-red-400">No</td><td class="text-red-400">No</td><td class="text-green-400">Yes</td></tr>
+                  <tr><td class="font-semibold text-slate-200">Built-in grip</td><td class="text-red-400">No</td><td class="text-red-400">No</td><td class="text-red-400">No</td><td class="text-green-400">Yes</td></tr>
+                  <tr><td class="font-semibold text-slate-200">Price (body)</td><td>$300–600</td><td>$350–700</td><td>$400–800</td><td>$1,500–2,500</td></tr>
+                  <tr><td class="font-semibold text-slate-200">Best for</td><td>Budget</td><td>Value tripod</td><td>Best all-around</td><td>Handheld + features</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p class="text-base leading-relaxed">
+            For most shooters, the <strong>Pentax 6x7 MLU</strong> or <strong>Pentax 67</strong> are the right choice. They are functionally identical and can still be found for well under $1,000. The 67II is the better camera, but not 3x better. Put the savings toward lenses and film.
+          </p>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- LENSES -->
+        <!-- ============================================================ -->
+        <section id="lenses" class="scroll-mt-20 mb-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 border-b border-warm/20 pb-4">The Pentax 67 Lens System</h2>
+          <p class="text-base leading-relaxed mb-8">
+            The Pentax 67 lens lineup is the largest of any medium format system, with over 20 focal lengths from 35mm fisheye to 1000mm reflex. All lenses use the same bayonet mount and are compatible with every version of the body. Original Takumar lenses (1969–1979) have stop-down metering. Later SMC Pentax lenses support open-aperture metering with compatible prisms. The optical quality across the range is excellent — several of these lenses have developed cult followings for good reason.
+          </p>
+
+          <h3 id="105mm" class="text-2xl font-bold mt-12 mb-3">105mm f/2.4 — The Legend</h3>
+          <p class="text-base leading-relaxed mb-3">
+            This is THE lens for the Pentax 67 system. A 55mm equivalent in 35mm terms, the 105mm f/2.4 is a fast normal lens that is razor sharp wide open with beautiful, creamy bokeh. It is the lens that made the Pentax 67 famous for portraiture, and it is the lens that most people buy the camera to use.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            The 105mm has a unique optical characteristic: when shot directly into the sun or strong backlight, it produces a distinctive orange-red lens flare orb that has become a signature look for Pentax 67 portraiture. Some photographers consider this a flaw. Most consider it magic. Three versions of this lens exist, with the latest having the best multi-coatings, but all three are optically excellent.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            The one real limitation is the minimum focus distance of 39 inches (about one meter). You cannot get tight headshots without extension tubes. For full-body and environmental portraits, this is not an issue. For tighter framing, consider the <a href="#90mm">90mm f/2.8</a> which focuses closer.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> 55mm equivalent. Fast normal lens.</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Razor sharp wide open, beautiful bokeh</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Unique orange/red flare orb in backlit shots</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Minimum focus distance: 39 inches</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Price: $400–700 depending on version</li>
+          </ul>
+          <p class="text-sm text-slate-500 font-sans italic">Verdict: Buy this first. Period.</p>
+          <ImagePlaceholder alt="Sample image: Portrait shot on Pentax 67 105mm f/2.4 wide open" caption="The 105mm f/2.4 wide open — the reason most people buy this camera." />
+
+          <h3 id="75mm" class="text-2xl font-bold mt-12 mb-3">75mm f/2.8</h3>
+          <p class="text-base leading-relaxed mb-3">
+            The 75mm (38mm equivalent) is a wide-normal lens that is extremely sharp, even wide open. It is also absurdly cheap — often found for $100–200, making it the best value in the entire Pentax 67 system. At this price, there is no reason not to own one.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            This focal length is versatile. It works beautifully for environmental portraits where you want to include the subject's surroundings. It is a natural fit for street photography, travel, and landscapes. The slightly wide perspective on the 6x7 frame gives images a sense of place without the distortion of a true wide angle. Pair it with the 105mm and you have a two-lens kit that covers 90% of shooting situations.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> 38mm equivalent. Wide-normal.</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Extremely sharp, even wide open</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> $100–200 — incredible value</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Great for environmental portraits, street, landscapes</li>
+          </ul>
+          <p class="text-sm text-slate-500 font-sans italic">Verdict: The second lens to buy. Absurd value for the quality.</p>
+
+          <h3 id="55mm" class="text-2xl font-bold mt-12 mb-3">55mm f/4</h3>
+          <p class="text-base leading-relaxed mb-3">
+            A 28mm equivalent, the 55mm f/4 is a true wide angle for the 6x7 format. It is slower at f/4 than the normal and wide-normal lenses, which means the viewfinder is dimmer and you lose a stop of handholding capability. But it is sharp across the frame when stopped down to f/8 and captures a dramatic amount of the scene.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            Some barrel distortion is visible at the edges, which is expected for this focal length on any format. For architecture, landscapes, and interiors, the 55mm delivers. It is not a lens you will use every day, but when you need wide, you need wide.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> 28mm equivalent. True wide angle.</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> f/4 maximum — slower, dimmer viewfinder</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Sharp across the frame stopped down</li>
+          </ul>
+          <p class="text-sm text-slate-500 font-sans italic">Verdict: Solid wide option if you need it.</p>
+
+          <h3 id="45mm" class="text-2xl font-bold mt-12 mb-3">45mm f/4</h3>
+          <p class="text-base leading-relaxed mb-3">
+            The 23mm equivalent ultra-wide. This is a heavy, chunky lens with a large front element that commands attention. The center is sharp wide open, but the edges soften noticeably until you stop down to f/8 or beyond. It is a specialized tool — excellent for dramatic landscapes, architecture, and environmental work where you want to exaggerate perspective.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> 23mm equivalent. Ultra-wide.</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Heavy, large front element</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Stop down to f/8+ for best edge sharpness</li>
+          </ul>
+          <p class="text-sm text-slate-500 font-sans italic">Verdict: Specialized. Buy only if you need ultra-wide.</p>
+
+          <h3 id="90mm" class="text-2xl font-bold mt-12 mb-3">90mm f/2.8</h3>
+          <p class="text-base leading-relaxed mb-3">
+            The 90mm (46mm equivalent) sits between the 75mm and 105mm and offers a closer minimum focus distance of 25 inches — significantly closer than the 105mm's 39 inches. This makes it a strong alternative for portrait work where you want tighter framing without extension tubes. Many portrait photographers who have used both ultimately prefer the 90mm for the working distance flexibility.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            A leaf shutter version (90mm f/2.8 LS) exists for flash sync at all shutter speeds. If you shoot studio portraits with strobes, the LS version is worth the premium.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> 46mm equivalent. Normal-ish.</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> 25-inch minimum focus (closer than 105mm)</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> LS version available for flash sync</li>
+          </ul>
+          <p class="text-sm text-slate-500 font-sans italic">Verdict: Strong alternative to the 105mm, especially for tighter portrait work.</p>
+
+          <h3 id="135mm" class="text-2xl font-bold mt-12 mb-3">135mm f/4 Macro</h3>
+          <p class="text-base leading-relaxed mb-3">
+            A 70mm equivalent short telephoto with true macro capability. This is an excellent lens for product photography, still life, botanical work, and tight portraits. The macro capability means you can get close enough for detailed texture shots without additional accessories. Optical quality is outstanding — sharp, contrasty, and well-corrected.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> 70mm equivalent. Short telephoto with macro.</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Excellent for product, still life, tight portraits</li>
+          </ul>
+          <p class="text-sm text-slate-500 font-sans italic">Verdict: Niche but excellent if macro is your thing.</p>
+
+          <h3 id="165mm" class="text-2xl font-bold mt-12 mb-3">165mm f/2.8</h3>
+          <p class="text-base leading-relaxed mb-3">
+            The 85mm equivalent — the classic portrait focal length. At f/2.8 on the 6x7 format, the depth of field is paper-thin. Backgrounds dissolve into pure cream. The rendering is gorgeous, and if portraits are your primary subject, this lens will make you very happy. An LS (leaf shutter) version also exists for studio flash work.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            The trade-off is size and weight. This is a large, heavy lens that adds significant heft to an already heavy camera. And honestly, the <a href="#105mm">105mm f/2.4</a> gets you 90% of the way there at half the price and weight. The 165mm is the premium choice for dedicated portrait shooters.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> 85mm equivalent. Classic portrait focal length.</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Gorgeous separation at f/2.8. Large and heavy.</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> LS version available for flash sync</li>
+          </ul>
+          <p class="text-sm text-slate-500 font-sans italic">Verdict: Premium portrait lens. The 105mm does 90% of what this does at half the price and weight.</p>
+
+          <h3 id="200mm" class="text-2xl font-bold mt-12 mb-3">200mm f/4</h3>
+          <p class="text-base leading-relaxed mb-3">
+            A 100mm equivalent telephoto. Solid optical performance, reasonable size for the focal length, and useful when you need more reach than the 165mm provides. Not a lens most shooters need in their first kit, but a capable performer if your work requires telephoto compression — think compressed landscapes, distant subjects, or isolating details from a distance.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> 100mm equivalent. Telephoto.</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Solid performer, reasonable size</li>
+          </ul>
+          <p class="text-sm text-slate-500 font-sans italic">Verdict: Good if you need reach. Not essential for most kits.</p>
+
+          <h3 id="lens-buying-guide" class="text-2xl font-bold mt-12 mb-4">Which Lenses to Buy First</h3>
+          <ol class="space-y-3 text-base ml-4 list-decimal list-inside">
+            <li><strong>Start with the 105mm f/2.4.</strong> Non-negotiable. This is the lens that defines the system.</li>
+            <li><strong>Add the 75mm f/2.8</strong> for wide work. At $100–200, it is the best value in medium format glass.</li>
+            <li><strong>If you shoot portraits primarily,</strong> consider the 165mm f/2.8 or <a href="#90mm">90mm f/2.8</a> as a third lens.</li>
+            <li><strong>The 55mm f/4</strong> if you need true wide angle for landscapes or architecture.</li>
+            <li><strong>Everything else is specialized.</strong> Buy as your work demands.</li>
+          </ol>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- VIEWFINDERS -->
+        <!-- ============================================================ -->
+        <section id="viewfinders" class="scroll-mt-20 mb-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 border-b border-warm/20 pb-4">Viewfinders and Prisms</h2>
+          <p class="text-base leading-relaxed mb-8">
+            The Pentax 67 uses interchangeable viewfinders. Your choice affects weight, metering capability, and shooting style. This is not a minor decision — the viewfinder changes how you interact with the camera in fundamental ways.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Waist-Level Finder</h3>
+          <p class="text-base leading-relaxed mb-3">
+            The lightest viewfinder option, and it saves a meaningful amount of weight on a camera that is already pushing the limits of what you want to carry all day. The waist-level finder has no metering, so you will need a handheld meter or phone app. The image is also reversed left-to-right, which takes practice — panning to follow a subject feels backwards at first, but becomes second nature after a few rolls.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            The waist-level finder excels for tripod work, landscapes, and street photography. Looking down into the finder is less conspicuous than holding a giant SLR to your eye, and it encourages a more deliberate, contemplative shooting style. It also opens up low-angle compositions that would be uncomfortable with an eye-level prism.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> Lightest option (saves significant weight)</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> No metering — use handheld meter</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Reversed left-right image (takes practice)</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Price: $50–150</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">TTL Metering Prism</h3>
+          <p class="text-base leading-relaxed mb-3">
+            The metering prism turns the Pentax 67 into a proper eye-level SLR with center-weighted TTL metering. It adds significant weight — you will notice it — but the convenience of built-in metering and correct left-right viewing is worth it for many shooters, especially handheld work where speed matters.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            Two generations exist: the older CdS version (slower to respond, prone to memory effect) and the SPD version from the Pentax 67 era (faster, more accurate). The SPD version is worth the small price premium. All metering prisms can drift over time, so budget for a CLA or keep a handheld meter as backup. A prism that reads consistently one stop off is still useful — just compensate.
+          </p>
+          <ul class="space-y-2 text-base mb-4 ml-4">
+            <li class="flex gap-2"><span class="text-warm">—</span> Center-weighted TTL metering</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Eye-level viewing like a 35mm SLR</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> CdS version (older) vs SPD version (better)</li>
+            <li class="flex gap-2"><span class="text-warm">—</span> Price: $150–400 depending on version and condition</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">AE Prism <span class="text-slate-500 font-sans text-base font-normal">(67II only)</span></h3>
+          <p class="text-base leading-relaxed mb-3">
+            The AE prism is exclusive to the <a href="#pentax-67ii">Pentax 67II</a> and offers aperture priority auto exposure, selectable metering modes (center-weighted and spot), and the most accurate metering in the system. It is typically included with a 67II body purchase. If you own a 67II, this is the prism you want.
+          </p>
+
+          <div class="mt-8 p-6 bg-dark-800 border border-dark-700 rounded-lg">
+            <p class="text-sm font-sans text-slate-300">
+              <strong class="text-warm">Recommendation:</strong> If you shoot on a tripod with a handheld meter, the waist-level finder saves weight and money. If you shoot handheld or want convenience, the TTL metering prism is worth the weight penalty. Budget for a CLA if meter readings seem off.
+            </p>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- FILM -->
+        <!-- ============================================================ -->
+        <section id="film" class="scroll-mt-20 mb-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 border-b border-warm/20 pb-4">Film Recommendations</h2>
+          <p class="text-base leading-relaxed mb-8">
+            The Pentax 67 shoots 120 and 220 film (10 frames on 120, 21 on 220). 220 is nearly extinct, so plan on 120. At 10 frames per roll, every shot costs $1.50–3.00+ with processing. Choose your film deliberately. The good news: medium format film has so much resolving power that even budget film stocks look stunning on a 6x7 negative.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-4">Color Negative</h3>
+          <ul class="space-y-4 text-base">
+            <li><strong>Kodak Portra 400</strong> — The default choice for a reason. Gorgeous skin tones, extraordinary exposure latitude (overexpose by a stop for best results), and fine enough grain that 6x7 negatives look nearly grainless. If you only shoot one color stock, make it Portra 400.</li>
+            <li><strong>Kodak Portra 160</strong> — Finer grain and lower speed. Ideal for bright daylight and tripod work where you have plenty of light. The color palette is slightly cooler than Portra 400, with exquisite skin rendering.</li>
+            <li><strong>Kodak Ektar 100</strong> — Saturated, punchy, and fine-grained. Excellent for landscapes where you want vivid color. Less forgiving of overexposure than Portra — Ektar prefers accurate exposure or slight underexposure.</li>
+            <li><strong>Kodak Gold 200</strong> — The budget option. Warmer tones, slightly more grain, but perfectly good for casual shooting. At $7–8 per roll versus $12+ for Portra, the savings add up when you are learning.</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold mt-10 mb-4">Black and White</h3>
+          <ul class="space-y-4 text-base">
+            <li><strong>Ilford HP5 Plus 400</strong> — Versatile, pushes well to 800 or 1600, classic look. The workhorse B&W stock. In medium format, the grain is barely visible even at 400.</li>
+            <li><strong>Ilford Delta 100</strong> — Fine grain, high detail, tabular grain technology. Ideal for landscapes and architecture on a tripod where you want maximum sharpness and tonal range.</li>
+            <li><strong>Kodak Tri-X 400</strong> — The classic. Beautiful grain structure that practically defines what black and white film looks like. In 6x7, Tri-X has a wonderful organic quality.</li>
+            <li><strong>Ilford FP4 Plus 125</strong> — Extremely fine grain and rich tonal range. A traditional-grain film that rewards careful exposure and development. Gorgeous in medium format.</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold mt-10 mb-4">Slide Film</h3>
+          <ul class="space-y-4 text-base">
+            <li><strong>Fuji Provia 100F</strong> — Fine grain, accurate colors, professional reliability. Slide film demands precise exposure — there is almost no latitude for error. But when you nail it, the results are breathtaking.</li>
+            <li><strong>Fuji Velvia 50</strong> — Hyper-saturated. Greens are electric, reds are molten, skies are impossibly blue. Landscapes only. Absolutely unforgiving of exposure errors. Meter carefully.</li>
+            <li><strong>Kodak Ektachrome E100</strong> — Slightly warmer than Provia with excellent quality. A good alternative if you find Provia too cool-toned.</li>
+          </ul>
+
+          <div class="mt-8 p-6 bg-dark-800 border border-dark-700 rounded-lg">
+            <p class="text-sm font-sans text-slate-300">
+              <strong class="text-warm">A note on 6x7 slide film:</strong> A properly exposed 6x7 transparency on a light table is one of the most stunning things in photography. The detail, the color saturation, the physical presence of a medium format chrome — it is worth trying at least once, even if you normally shoot negative film.
+            </p>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- SHOOTING TIPS -->
+        <!-- ============================================================ -->
+        <section id="shooting-tips" class="scroll-mt-20 mb-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 border-b border-warm/20 pb-4">Shooting Tips</h2>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Loading Film</h3>
+          <p class="text-base leading-relaxed mb-3">
+            Open the film back by pulling up on the latch on the left side of the camera. The empty spool sits on the right, the fresh roll goes on the left. Thread the backing paper leader under the roller and into the slot on the take-up spool. Align the arrow on the backing paper with the red dot on the camera body. Close the back and wind the advance lever until the film counter reaches "1." You will feel increased resistance when the film is properly tensioned.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            Take your time loading. A misloaded roll means 10 wasted frames. If the advance lever feels too loose or the counter is not advancing, open the back and start over. It is better to waste 30 seconds than an entire roll.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Metering</h3>
+          <p class="text-base leading-relaxed mb-3">
+            If using the TTL prism, remember it is center-weighted — the meter emphasizes the middle of the frame. Point the center at the most important tonal area (skin for portraits, the brightest area you want detail in for landscapes), lock the reading, then recompose. For scenes with extreme contrast, meter the highlights and shadows separately and split the difference, or just meter the shadows and let the highlights ride.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            If using the waist-level finder, you need a handheld meter. The Sekonic L-308X is compact and reliable. Phone apps like Lightmeter (iOS) are surprisingly accurate and always in your pocket. Incident metering (pointing the meter at the camera from the subject's position) is generally more reliable than reflective metering for this camera, because it is not fooled by backlight or dark backgrounds.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            The Sunny 16 rule works well as a sanity check: on a sunny day, set aperture to f/16 and shutter speed to the reciprocal of your film speed (f/16 at 1/400s for 400 speed film). Adjust from there.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Handheld Shooting</h3>
+          <p class="text-base leading-relaxed mb-3">
+            The Pentax 67 weighs about 2.5kg (5.5 lbs) with a prism and lens. It is heavy, but shootable handheld. The minimum safe shutter speed for sharp results is around 1/125s. Some experienced shooters consistently get sharp frames at 1/60s, but do not count on it when you are starting out.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            Technique matters. Brace your elbows against your body. Use the left hand to support the lens, not grip the body. Exhale slowly and squeeze the shutter release — do not jab it. The camera's mass actually works in your favor: it resists the small micro-tremors that plague lighter cameras. Use MLU even when handheld for a marginal sharpness improvement.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Tripod Shooting</h3>
+          <p class="text-base leading-relaxed mb-3">
+            This is where the Pentax 67 truly excels. On a sturdy tripod with MLU engaged and a cable release, the system delivers staggering resolution. The workflow: compose and focus, engage mirror lockup, wait 1–2 seconds for all vibration to settle, then fire the shutter via cable release. At slow shutter speeds, this workflow is non-negotiable for sharp results.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            A sturdy tripod is essential. This camera will shake a lightweight travel tripod. Look for legs rated for at least 15 lbs / 7 kg. A ball head with an Arca-Swiss plate works well, though some photographers prefer geared heads for precise landscape compositions.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Focusing</h3>
+          <p class="text-base leading-relaxed mb-3">
+            The stock focusing screen is adequate but not especially bright, particularly with slower lenses like the 55mm f/4. The split-prism center of the screen works well in good light — line up the edges of your subject across the split and they will snap into focus. In low light, the split prism may black out; use the surrounding microprism ring or ground glass instead.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            Maxwell Hi-Lux replacement screens significantly improve brightness and are worth considering if you find yourself struggling to focus, especially with slower lenses. At $2–3 per frame, nailing focus before you press the shutter is worth any investment in a better screen.
+          </p>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- ACCESSORIES -->
+        <!-- ============================================================ -->
+        <section id="accessories" class="scroll-mt-20 mb-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 border-b border-warm/20 pb-4">Essential Accessories</h2>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Grips</h3>
+          <p class="text-base leading-relaxed mb-3">
+            A wooden left-hand grip is almost mandatory. The Pentax 67 body is a flat-sided metal box, and a wooden grip transforms the handling. It gives your left hand something to wrap around, makes the camera feel more secure, and subtly reduces perceived weight. Third-party wooden grips are available from multiple makers for $30–80.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            For the right hand, several makers produce custom grips (search for Artit grips or @pimp_my_pentax on Instagram). The 67II has a built-in right grip which is one of its best features. For earlier bodies, even a simple leather half-case improves the grip.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Cable Release</h3>
+          <p class="text-base leading-relaxed mb-3">
+            A standard threaded cable release screws into the shutter button. It is essential for tripod work with MLU — you do not want to touch the camera after locking the mirror up. Buy two. They are cheap ($10–20) and they break or get lost. Keep one in the bag, one on the camera.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Lens Hoods</h3>
+          <p class="text-base leading-relaxed mb-3">
+            Use them. Always. The older Takumar and early SMC lenses have vintage coatings that are more susceptible to flare than modern glass. The original Pentax rubber screw-on hoods are excellent, easy to reverse for storage, and still available used. A hood is the cheapest insurance against washed-out contrast.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Strap</h3>
+          <p class="text-base leading-relaxed mb-3">
+            This camera needs a serious strap. The thin nylon strap that may come with a used body will dig into your neck within an hour. The Peak Design Slide or any wide, padded strap rated for heavy cameras is a significant quality-of-life upgrade. Black Rapid sling straps work well for all-day carry — distributing the weight across your torso rather than your neck.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Light Meter</h3>
+          <p class="text-base leading-relaxed mb-3">
+            If you use the waist-level finder, or if your TTL prism meter has drifted, a handheld meter is essential. The Sekonic L-308X is compact, reliable, and does both incident and reflective readings. Phone apps like Lightmeter (iOS) and Light Meter Free (Android) are surprisingly good as backup meters, and you always have your phone with you.
+          </p>
+          <p class="text-base leading-relaxed">
+            Incident metering — where you hold the meter at the subject and point it back toward the camera — is more reliable than reflective metering for most situations with this camera. It is not fooled by dark or bright backgrounds the way in-camera reflective metering can be.
+          </p>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- TROUBLESHOOTING -->
+        <!-- ============================================================ -->
+        <section id="troubleshooting" class="scroll-mt-20 mb-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 border-b border-warm/20 pb-4">Common Issues and Troubleshooting</h2>
+          <p class="text-base leading-relaxed mb-8">
+            The Pentax 67 is a mechanical tank, but it is also 30–50 years old. Every mechanical camera needs maintenance, and the Pentax 67 is no exception. Here are the most common issues and how to address them.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Mirror Stuck Up</h3>
+          <p class="text-base leading-relaxed mb-3">
+            The most common issue, especially on cameras that have sat unused in a closet for years. The cause is almost always dried or gummed-up lubricant in the mirror mechanism. The mirror fires up during exposure and should return on its own — when it does not, you see black through the viewfinder and the camera appears dead.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            Quick fix: remove the lens and gently — <em>gently</em> — press the mirror down with a finger. Do not force it. If it returns to position and the camera then fires normally, it may be a one-time issue. If it recurs, the camera needs a <a href="#buying-guide">CLA</a> from a qualified technician. Prevention: shoot the camera regularly. Mechanical cameras need to be exercised to keep lubricants distributed.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Shutter Not Firing</h3>
+          <p class="text-base leading-relaxed mb-3">
+            First, check the obvious. Is the film advance lever fully wound? The shutter will not fire until the film is advanced. Is the mirror lockup switch disengaged? If MLU is engaged and the mirror is already up, the next press fires the shutter, not the mirror. On the 6x7 and 67, a dead battery only kills the meter — the shutter is fully mechanical and fires without power. On the 67II, the battery is required for the electronic shutter.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            If none of the above apply, the shutter mechanism may need a CLA. Sluggish or inconsistent shutter speeds are a sign of old lubricant. Cold weather can also slow mechanical shutters — if you are shooting in freezing temperatures, keep the camera warm under your jacket between shots.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Light Leaks</h3>
+          <p class="text-base leading-relaxed mb-3">
+            Light leaks are common on older bodies and almost always caused by degraded light seals — the thin foam strips around the film back door and mirror box that block stray light. Symptoms include fogging on the edges of negatives, orange streaks on color film, or unexplained haze on one side of the frame.
+          </p>
+          <p class="text-base leading-relaxed mb-3">
+            The fix is replacing the light seals. Pre-cut seal kits are available online for $15–25, and the replacement is a manageable DIY project with tweezers, a toothpick, and patience. Most technicians include seal replacement as part of a CLA.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Inaccurate Meter</h3>
+          <p class="text-base leading-relaxed mb-3">
+            TTL prism meters drift over time. If your negatives are consistently over or underexposed by a stop or more, and you have verified your metering technique, the prism likely needs recalibration. Quick fix: use a handheld meter or phone app as your primary meter, and use the prism as a secondary reference. Real fix: CLA of the prism by a technician who can recalibrate the meter circuit.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Film Advance Issues</h3>
+          <p class="text-base leading-relaxed mb-3">
+            Film not advancing properly, unintentional double exposures, or blank frames usually point to a loading issue. Verify the backing paper is aligned to the red dot and the leader is properly threaded into the take-up spool. If the film counter does not advance, the counter mechanism may need internal cleaning. If winding feels gritty or rough, the camera needs a CLA.
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Mirror Slap and Vibration</h3>
+          <p class="text-base leading-relaxed mb-3">
+            This is not a defect — it is a characteristic of the camera. The mirror is massive and creates significant vibration when it fires. The danger zone is shutter speeds between 1/8s and 1/30s, where mirror vibration has the most time to affect the exposure. The solution: either go faster (1/60s and above) or go slower (use MLU, cable release, and wait 1–2 seconds for vibration to settle before firing).
+          </p>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Finding a Repair Technician</h3>
+          <p class="text-base leading-relaxed mb-3">
+            A CLA (Clean, Lubricate, Adjust) costs $250–400 typically and is the single best investment you can make in a used Pentax 67's longevity. Look for technicians who specialize in medium format or specifically in the Pentax 67 — this camera has specific quirks that generalist repair shops may not be familiar with.
+          </p>
+          <p class="text-base leading-relaxed">
+            The r/AnalogCommunity and r/pentax67 subreddits are good places to ask for current technician recommendations. Expect 4–12 week turnaround times — the good technicians are backed up because there are fewer of them every year and more cameras that need service.
+          </p>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- BUYING GUIDE -->
+        <!-- ============================================================ -->
+        <section id="buying-guide" class="scroll-mt-20 mb-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 border-b border-warm/20 pb-4">Buying Guide</h2>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">Where to Buy</h3>
+          <ul class="space-y-4 text-base mb-6">
+            <li><strong>KEH Camera</strong> (keh.com) — Graded condition ratings, return policy, reliable. The safest option for buying used. Their "Bargain" grade often looks better than described.</li>
+            <li><strong>eBay</strong> — Widest selection, but use caution with ungraded listings. Check seller feedback carefully. "Untested" usually means "broken." Ask questions before bidding.</li>
+            <li><strong>r/photomarket on Reddit</strong> — Peer-to-peer sales from fellow photographers. Often good prices and honest descriptions. Check user history and reputation.</li>
+            <li><strong>Local camera shops</strong> — Increasingly rare for medium format, but worth checking. You can handle the camera before buying, which is invaluable.</li>
+            <li><strong>Japan imports</strong> — Japanese sellers on eBay often have excellent-condition gear that was well maintained. Language barrier can make condition assessment harder, but the quality is generally high.</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold mt-10 mb-3">What to Check Before Buying</h3>
+          <ol class="space-y-3 text-base ml-4 list-decimal list-inside mb-6">
+            <li>Shutter fires at all speeds — listen for timing differences between 1s and 1/1000s</li>
+            <li>Mirror lockup switch functions (on MLU, 67, and 67II bodies)</li>
+            <li>Film advance is smooth and consistent through a full wind cycle</li>
+            <li>Light seals are intact — look inside the film back with a flashlight for crumbling foam</li>
+            <li>Lens mount is clean, no damage to the bayonet tabs</li>
+            <li>If buying with prism: meter needle responds to changes in light</li>
+            <li>Ask if the camera has had a recent CLA — this is a huge value add and can justify a higher price</li>
+          </ol>
+
+          <h3 class="text-2xl font-bold mt-10 mb-4">Budget Planning</h3>
+          <div class="overflow-x-auto -mx-4 sm:mx-0 mb-6">
+            <div class="min-w-[400px] px-4 sm:px-0">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Budget Range</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="text-slate-200">Body (6x7 MLU or 67)</td><td>$350–800</td></tr>
+                  <tr><td class="text-slate-200">105mm f/2.4 lens</td><td>$400–700</td></tr>
+                  <tr><td class="text-slate-200">TTL metering prism</td><td>$150–400</td></tr>
+                  <tr><td class="text-slate-200">Wooden grip</td><td>$30–80</td></tr>
+                  <tr><td class="text-slate-200">CLA (recommended)</td><td>$250–400</td></tr>
+                  <tr><td class="text-slate-200">Cable release</td><td>$10–20</td></tr>
+                  <tr><td class="text-slate-200">Strap</td><td>$30–70</td></tr>
+                  <tr><td class="font-semibold text-warm border-t border-warm/30">Total starter kit</td><td class="font-semibold text-warm border-t border-warm/30">$1,220–2,470</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p class="text-base leading-relaxed">
+            The wide range reflects the variability in the used market. Patient shopping, buying a 6x7 MLU instead of a 67, and finding a body that has already been CLA'd can save you hundreds. The <a href="#105mm">105mm f/2.4</a> is the one place not to cut corners — it is the reason to own this camera.
+          </p>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- SAMPLE IMAGES -->
+        <!-- ============================================================ -->
+        <section id="sample-images" class="scroll-mt-20 mb-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 border-b border-warm/20 pb-4">Sample Images</h2>
+          <p class="text-base leading-relaxed mb-8">
+            All images on this page were shot on a Pentax 6x7 with various lenses in and around Charleston, SC. These are real-world results — not studio tests — showing what this camera system delivers when you carry it into the field.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <ImagePlaceholder alt="Sample: Lowcountry marsh at golden hour — 105mm f/2.4, Portra 400" aspectRatio="4/5" />
+            <ImagePlaceholder alt="Sample: Portrait — 105mm f/2.4 wide open, Portra 800" aspectRatio="4/5" />
+            <ImagePlaceholder alt="Sample: Oak alley — 75mm f/2.8, Ektar 100" aspectRatio="4/5" />
+            <ImagePlaceholder alt="Sample: Beach scene — 55mm f/4, Portra 160" aspectRatio="4/5" />
+            <ImagePlaceholder alt="Sample: Downtown Charleston — 45mm f/4, Tri-X 400" aspectRatio="4/5" />
+            <ImagePlaceholder alt="Sample: Detail shot — 135mm f/4 Macro, Delta 100" aspectRatio="4/5" />
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- FAQ -->
+        <!-- ============================================================ -->
+        <section id="faq" class="scroll-mt-20 mb-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4 border-b border-warm/20 pb-4">Frequently Asked Questions</h2>
+          <p class="text-base leading-relaxed mb-8">
+            Common questions about the Pentax 67 system, answered from experience.
+          </p>
+
+          <details>
+            <summary>Is the Pentax 67 worth it in 2026?</summary>
+            <div>
+              <p class="text-base leading-relaxed">
+                Yes. For under $1,000 (body + lens), you get 6x7cm negatives that rival medium format digital backs costing $10,000+. The lens lineup is the best in medium format — nothing else comes close for variety and optical quality at these prices. The main trade-offs are weight (it is a heavy camera) and 10 frames per roll (which forces you to slow down and think about each shot, which many photographers consider a benefit, not a limitation). If you want the medium format look and you are willing to shoot film, the Pentax 67 is the best value in the format.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Can you shoot the Pentax 67 handheld?</summary>
+            <div>
+              <p class="text-base leading-relaxed">
+                Yes, at 1/125s or faster. The camera is heavy but the mass absorbs some vibration — it is actually more stable than lighter medium format cameras in some ways. Many photographers regularly handhold at 1/60s with sharp results, though this requires good technique. Use MLU even when handheld for best results. See the <a href="#shooting-tips">shooting tips</a> section for handheld technique advice.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What battery does the Pentax 67 use?</summary>
+            <div>
+              <p class="text-base leading-relaxed">
+                The 6x7 and 67 use a 6V 4SR44 (or 4LR44) battery for the metering prism only. The shutter is fully mechanical and works without any battery — you can shoot all day with a dead battery, you just will not have metering. The 67II is different: it uses a 6V 2CR-1/3N battery, and because the shutter is electronic, the battery is required to shoot. Always carry a spare if you shoot a 67II.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What is the difference between the Pentax 6x7 and 67?</summary>
+            <div>
+              <p class="text-base leading-relaxed">
+                Primarily branding and the metering prism. The 67 (1989) updated from CdS to SPD metering cells for better low-light accuracy and faster response. The shutter, lens mount, film transport, and accessories are identical. The <a href="#6x7-mlu">6x7 MLU</a> and 67 are functionally the same camera. See the <a href="#versions">camera versions</a> section for a detailed comparison.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How many shots per roll on the Pentax 67?</summary>
+            <div>
+              <p class="text-base leading-relaxed">
+                10 frames on a roll of 120 film. 21 frames on 220 film, but 220 is nearly impossible to find now — almost all current production medium format film is 120 only. Plan on 10 frames per roll and budget accordingly. At current film and processing prices, each frame costs roughly $1.50–3.00.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What is CLA and do I need one?</summary>
+            <div>
+              <p class="text-base leading-relaxed">
+                CLA stands for Clean, Lubricate, Adjust. It is a professional service where a technician disassembles the camera, cleans old and degraded lubricant, applies fresh lubrication, replaces light seals, and calibrates shutter speeds and meter accuracy. If you are buying a used Pentax 67, budget $250–400 for a CLA. It is the single best investment you can make in the camera's reliability and longevity. See the <a href="#troubleshooting">troubleshooting</a> section for more on finding a repair technician.
+              </p>
+            </div>
+          </details>
+        </section>
+
+      </article>
+    </div>
+  </div>
 </BaseLayout>

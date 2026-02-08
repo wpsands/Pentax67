@@ -1,0 +1,23 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<header class="sticky top-0 z-50 bg-dark-950/95 backdrop-blur-sm border-b border-warm/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-14">
+      <a href={`${base}/`} class="font-serif text-lg text-slate-100 hover:text-warm no-underline">
+        Pentax 67 Resources
+      </a>
+      <button
+        id="toc-toggle"
+        class="lg:hidden flex items-center gap-2 text-sm font-sans text-slate-400 hover:text-warm transition-colors"
+        aria-label="Toggle table of contents"
+      >
+        <span>Contents</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

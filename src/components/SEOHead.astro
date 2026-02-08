@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  type?: string;
+  image?: string;
+  jsonLd?: object[];
+}
+
+const {
+  title,
+  description,
+  canonical,
+  type = 'website',
+  image,
+  jsonLd = [],
+} = Astro.props;
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const canonicalUrl = canonical ?? `${siteUrl}${base}${Astro.url.pathname}`;
+const ogImage = image ? `${siteUrl}${base}${image}` : undefined;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalUrl} />
+{ogImage && <meta property="og:image" content={ogImage} />}
+<meta property="og:site_name" content="Pentax 67 Resources" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+{ogImage && <meta name="twitter:image" content={ogImage} />}
+
+<!-- JSON-LD -->
+{jsonLd.map((data) => (
+  <script type="application/ld+json" set:html={JSON.stringify(data)} />
+))}

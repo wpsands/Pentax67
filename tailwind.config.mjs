@@ -4,38 +4,23 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Geist Sans', 'system-ui', '-apple-system', 'sans-serif'],
-        serif: ['Lora', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
+        serif: ['Playfair Display', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+        dark: {
+          950: '#0a0f1a',
+          900: '#0f1729',
+          800: '#172038',
+          700: '#1e293b',
+          600: '#2a3650',
         },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+        warm: {
+          DEFAULT: '#f59e0b',
+          light: '#fbbf24',
+          dark: '#d97706',
+          dim: 'rgba(245, 158, 11, 0.15)',
         },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
-        'footer-bg': 'hsl(var(--footer-bg))',
-        'footer-fg': 'hsl(var(--footer-fg))',
-      },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
       },
     },
   },

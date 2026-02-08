@@ -1,0 +1,23 @@
+---
+interface Props {
+  alt: string;
+  caption?: string;
+  aspectRatio?: string;
+}
+
+const { alt, caption, aspectRatio = '16/9' } = Astro.props;
+---
+
+<figure class="my-8">
+  <div
+    class="w-full bg-dark-800 border border-dark-700 flex items-center justify-center text-slate-500 text-sm font-sans italic"
+    style={`aspect-ratio: ${aspectRatio};`}
+  >
+    <span class="px-4 text-center">{alt}</span>
+  </div>
+  {caption && (
+    <figcaption class="mt-2 text-sm text-slate-500 font-sans italic text-center">
+      {caption}
+    </figcaption>
+  )}
+</figure>
