@@ -1,0 +1,39 @@
+# Pentax 67 Resources
+
+> The definitive single-page guide to the Pentax 67 medium format film camera system.
+
+This site is maintained by Page Sands, a working Pentax 6x7 shooter based in Charleston, SC.
+
+## Site URL
+
+https://wpsands.github.io/pagini/
+
+## About This Resource
+
+A comprehensive, field-tested guide covering the entire Pentax 67 camera system. Written from real-world shooting experience, not theoretical reviews.
+
+## Topics Covered
+
+- Camera Versions: Asahi Pentax 6x7 (1969), 6x7 MLU (1976), Pentax 67 (1989), Pentax 67II (1998)
+- Lens System: 9 lenses reviewed including 105mm f/2.4, 75mm f/2.8, 55mm f/4, 45mm f/4, 90mm f/2.8, 135mm f/4 Macro, 165mm f/2.8, 200mm f/4
+- Viewfinders: Waist-level finder, TTL metering prism, AE prism (67II)
+- Film: Color negative, black and white, and slide film recommendations for 120 format
+- Shooting Tips: Loading film, metering, handheld technique, tripod workflow, focusing
+- Accessories: Grips, cable releases, lens hoods, straps, light meters
+- Troubleshooting: Mirror stuck, shutter issues, light leaks, inaccurate meters, film advance problems
+- Buying Guide: Where to buy, what to inspect, budget planning ($1,220–$2,470 starter kit)
+- FAQ: Common questions answered from experience
+
+## Key Facts
+
+- The Pentax 67 was produced from 1969 to 2009 across four versions
+- All versions share the same lens mount (Pentax 67 bayonet)
+- The system has over 20 available focal lengths from 35mm to 1000mm
+- It shoots 6x7cm frames on 120 film (10 frames per roll)
+- The 105mm f/2.4 is widely considered the best normal lens in medium format
+- Recommended starter budget: $1,220–$2,470 including body, lens, prism, grip, and CLA
+
+## Author
+
+Page Sands — AI-first GTM strategist and film photographer. Charleston, SC.
+https://pagesands.com

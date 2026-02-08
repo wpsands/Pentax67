@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://wpsands.github.io/pagini/sitemap-index.xml
+
+# AI / LLM crawlers — structured site overview
+# llms.txt: https://wpsands.github.io/pagini/llms.txt
+# llms-full.txt: https://wpsands.github.io/pagini/llms-full.txt

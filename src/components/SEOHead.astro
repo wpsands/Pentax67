@@ -6,6 +6,7 @@ interface Props {
   type?: string;
   image?: string;
   jsonLd?: object[];
+  author?: string;
 }
 
 const {
@@ -15,6 +16,7 @@ const {
   type = 'website',
   image,
   jsonLd = [],
+  author = 'Page Sands',
 } = Astro.props;
 
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
@@ -26,13 +28,16 @@ const ogImage = image ? `${siteUrl}${base}${image}` : undefined;
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalUrl} />
-<meta name="robots" content="index, follow" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content={author} />
+<meta name="generator" content={Astro.generator} />
 
 <!-- Open Graph -->
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:type" content={type} />
 <meta property="og:url" content={canonicalUrl} />
+<meta property="og:locale" content="en_US" />
 {ogImage && <meta property="og:image" content={ogImage} />}
 <meta property="og:site_name" content="Pentax 67 Resources" />
 
@@ -41,6 +46,10 @@ const ogImage = image ? `${siteUrl}${base}${image}` : undefined;
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+<!-- AI / LLM discoverability -->
+<link rel="llms" href={`${siteUrl}${base}/llms.txt`} />
+<link rel="llms-full" href={`${siteUrl}${base}/llms-full.txt`} />
 
 <!-- JSON-LD -->
 {jsonLd.map((data) => (

@@ -1,0 +1,233 @@
+# Pentax 67 Resources — Complete Guide
+
+> The definitive single-page guide to the Pentax 67 medium format film camera system. Written by Page Sands, a working Pentax 6x7 shooter based in Charleston, SC.
+
+## Site URL
+https://wpsands.github.io/pagini/
+
+---
+
+## Camera Versions
+
+There are four distinct versions of the Pentax 67. All share the same bayonet lens mount and most accessories.
+
+### Asahi Pentax 6x7 (1969–1976)
+- The original. Fully mechanical shutter (1s to 1/1000s + Bulb).
+- No mirror lockup (MLU). This is a significant limitation — the massive mirror creates vibration that can soften images on a tripod at 1/8s to 1/30s.
+- CdS metering prism available (battery powers meter only, not shutter).
+- Price: $300–600 body only.
+- Verdict: Avoid unless significantly cheaper than MLU version.
+
+### Pentax 6x7 MLU (1976–1989)
+- Added mirror lockup via sliding switch on right side of body.
+- Otherwise identical to original 6x7. Same shutter, same lens mount.
+- MLU is essential for sharp tripod results with this camera.
+- Best value in the system — functionally identical to the later Pentax 67.
+- Price: $350–700 body only.
+
+### Pentax 67 (1989–1998)
+- Cosmetic rebrand from "6X7" to "67".
+- Key improvement: SPD metering cells replace CdS (faster response, better low-light accuracy, no memory effect).
+- Same mechanical shutter and lens compatibility.
+- Price: $400–800 body only.
+- Verdict: Sweet spot of reliability and value.
+
+### Pentax 67II (1998–2009)
+- Significant redesign: built-in right-hand grip, top LCD panel.
+- AE prism with aperture priority auto exposure.
+- Selectable metering modes (center-weighted, spot).
+- Electronic shutter (battery required to fire — unlike earlier mechanical models).
+- Double exposure capability.
+- Price: $1,500–2,500 body only.
+- Verdict: Best camera in the system, but 3–4x the price of a 67.
+
+### Which to Buy
+For most shooters: Pentax 6x7 MLU or Pentax 67. Functionally identical, well under $1,000. The 67II is better but not 3x better — put the savings toward lenses and film.
+
+---
+
+## Lens System
+
+The Pentax 67 lens lineup is the largest in medium format, with 20+ focal lengths. All use the same bayonet mount across all body versions.
+
+### 105mm f/2.4 (55mm equivalent)
+The defining lens of the system. Razor sharp wide open, beautiful bokeh, distinctive orange-red flare orb in backlight. Three versions exist (latest has best coatings). Minimum focus: 39 inches. Price: $400–700. Buy this first.
+
+### 75mm f/2.8 (38mm equivalent)
+Wide-normal. Extremely sharp, even wide open. Often $100–200 — the best value in the entire system. Great for environmental portraits, street, landscapes. Buy this second.
+
+### 55mm f/4 (28mm equivalent)
+True wide angle. Slower at f/4 but sharp across the frame stopped down. Some barrel distortion at edges.
+
+### 45mm f/4 (23mm equivalent)
+Ultra-wide. Heavy lens, sharp center, edges soften until f/8+. Specialized.
+
+### 90mm f/2.8 (46mm equivalent)
+Closer minimum focus (25 inches) than the 105mm. Strong alternative for portrait work. LS (leaf shutter) version available for flash sync.
+
+### 135mm f/4 Macro (70mm equivalent)
+True macro capability. Excellent for product photography, still life, tight portraits.
+
+### 165mm f/2.8 (85mm equivalent)
+Classic portrait focal length. Paper-thin DOF at f/2.8 on 6x7. Gorgeous but heavy. LS version available. The 105mm does 90% of this at half the price.
+
+### 200mm f/4 (100mm equivalent)
+Telephoto. Solid performer, not essential for most kits.
+
+### Lens Buying Priority
+1. 105mm f/2.4 (non-negotiable)
+2. 75mm f/2.8 ($100–200, incredible value)
+3. 165mm f/2.8 or 90mm f/2.8 for portrait work
+4. 55mm f/4 for wide angle
+5. Everything else as needed
+
+---
+
+## Viewfinders
+
+### Waist-Level Finder
+Lightest option. No metering (use handheld meter). Reversed left-right image. Great for tripod work. $50–150.
+
+### TTL Metering Prism
+Center-weighted TTL metering. Eye-level viewing. CdS version (older, slower) vs SPD version (67-era, better). Meters drift over time. $150–400.
+
+### AE Prism (67II only)
+Aperture priority auto exposure. Selectable metering modes. Most accurate metering in the system.
+
+---
+
+## Film Recommendations
+
+The Pentax 67 shoots 120 film (10 frames per roll). At $1.50–3.00+ per frame with processing, choose deliberately.
+
+### Color Negative
+- Kodak Portra 400: The default. Gorgeous skin tones, great latitude. Overexpose 1 stop.
+- Kodak Portra 160: Finer grain. Bright daylight and tripod work.
+- Kodak Ektar 100: Saturated, punchy. Landscapes. Less forgiving.
+- Kodak Gold 200: Budget option. Warmer tones.
+
+### Black and White
+- Ilford HP5 Plus 400: Versatile workhorse. Pushes well.
+- Ilford Delta 100: Fine grain, maximum detail.
+- Kodak Tri-X 400: Classic grain structure.
+- Ilford FP4 Plus 125: Extremely fine grain.
+
+### Slide Film
+- Fuji Provia 100F: Fine grain, accurate. Demands precise exposure.
+- Fuji Velvia 50: Hyper-saturated. Landscapes only. Unforgiving.
+- Kodak Ektachrome E100: Slightly warmer alternative.
+
+---
+
+## Shooting Tips
+
+### Handheld
+Minimum safe shutter speed: 1/125s. Brace elbows, support lens with left hand, exhale and squeeze. Use MLU even handheld.
+
+### Tripod
+Always use MLU + cable release. Lock mirror, wait 1–2 seconds, fire. Sturdy tripod required (15+ lb rating).
+
+### Metering
+TTL prism: center-weighted, meter the important area, recompose. Handheld: Sekonic L-308X or phone apps. Sunny 16 as sanity check.
+
+---
+
+## Common Issues
+
+- Mirror stuck up: Gently press down. Needs CLA if recurring.
+- Shutter not firing: Check film advance, MLU switch, battery (67II only).
+- Light leaks: Replace foam light seals ($15–25 DIY kit).
+- Inaccurate meter: Use handheld meter, get prism CLA.
+- Mirror slap vibration: Use MLU at 1/8s–1/30s. Not a defect.
+
+---
+
+## Buying Guide
+
+### Where to Buy
+- KEH Camera (keh.com): Graded, return policy, safest option.
+- eBay: Widest selection, use caution.
+- r/photomarket: Peer-to-peer, often good prices.
+- Japan imports: Excellent condition, available on eBay.
+
+### Budget Planning
+- Body (6x7 MLU or 67): $350–800
+- 105mm f/2.4 lens: $400–700
+- TTL metering prism: $150–400
+- Wooden grip: $30–80
+- CLA (recommended): $250–400
+- Cable release: $10–20
+- Strap: $30–70
+- **Total starter kit: $1,220–2,470**
+
+---
+
+## Key Definitions
+
+- **CLA**: Clean, Lubricate, Adjust. Professional camera service. $250–400. Budget for this on any used purchase.
+- **MLU**: Mirror Lockup. Locks the mirror in the up position before exposure to eliminate vibration. Essential for tripod work.
+- **TTL**: Through The Lens metering. Built into the prism viewfinder.
+- **120 film**: Standard medium format roll film. Yields 10 frames at 6x7cm.
+- **6x7**: The negative size — 6cm × 7cm. Larger than 6x6 or 645, smaller than 4x5 large format.
+
+---
+
+## Pentax 67 vs Other Medium Format Systems
+
+### vs Mamiya RB67/RZ67
+Both are 6x7 SLR systems. The Mamiya has a rotating back (portrait/landscape without turning the camera) and bellows focusing. The Pentax handles more like a 35mm SLR and has a larger lens selection. Mamiya is more of a studio camera; Pentax is more versatile for field use.
+
+### vs Hasselblad 500C/M
+Hasselblad shoots 6x6 (square). Smaller negative than 6x7. Modular system with interchangeable backs, lenses, and viewfinders. The Hasselblad is lighter and more compact. The Pentax 67 gives a larger negative and handles more intuitively for 35mm shooters.
+
+### vs Mamiya 7
+The Mamiya 7 is a rangefinder, not an SLR. Much lighter and more portable. No mirror slap. But no SLR viewing, limited lens selection, and no interchangeable viewfinders. If weight matters, the Mamiya 7 wins. If versatility and lens selection matter, the Pentax 67 wins.
+
+### vs Fuji GW690
+The "Texas Leica." A fixed-lens 6x9 rangefinder. Shoots an even larger negative but has no interchangeable lenses and no metering. Extremely simple and reliable. A different kind of camera for a different workflow.
+
+---
+
+## FAQ
+
+Q: Is the Pentax 67 worth it in 2026?
+A: Yes. For under $1,000 (body + lens), you get 6x7 negatives that rival medium format digital backs costing $10,000+. The lens lineup is the best in medium format.
+
+Q: Can you shoot the Pentax 67 handheld?
+A: Yes, at 1/125s or faster. The mass absorbs some vibration. Use MLU even handheld.
+
+Q: What battery does the Pentax 67 use?
+A: The 6x7 and 67 use a 6V 4SR44 battery for the meter only. The shutter is mechanical. The 67II uses 2CR-1/3N and requires a battery to fire.
+
+Q: What is the difference between the Pentax 6x7 and 67?
+A: Primarily the metering prism (CdS vs SPD cells). Same shutter, lens mount, and accessories.
+
+Q: How many shots per roll?
+A: 10 frames on 120 film.
+
+Q: What is CLA?
+A: Clean, Lubricate, Adjust. Professional camera service. Budget $250–400 for any used purchase.
+
+Q: What is the best Pentax 67 lens?
+A: The 105mm f/2.4. Buy it first. It is the reason most people buy this camera.
+
+Q: How much does a Pentax 67 weigh?
+A: About 2.5kg (5.5 lbs) with prism and lens attached.
+
+Q: Is the Pentax 67 good for portraits?
+A: It is one of the best portrait cameras ever made. The 6x7 negative with the 105mm f/2.4 produces images with a depth and dimensionality that digital cameras struggle to match.
+
+Q: Pentax 67 vs 67II — which should I buy?
+A: The 67II is the better camera (auto exposure, better grip, spot metering) but costs 3–4x more. For most shooters, the 67 or 6x7 MLU at $400–800 is the better value.
+
+Q: Where can I get a Pentax 67 repaired?
+A: Look for medium format specialists. Ask in r/AnalogCommunity or r/pentax67 for current recommendations. Budget $250–400 for CLA. Expect 4–12 week turnaround.
+
+Q: What film should I use in the Pentax 67?
+A: Start with Kodak Portra 400 (color) or Ilford HP5 Plus 400 (B&W). Both are forgiving, versatile, and look beautiful on 6x7 negatives.
+
+---
+
+## Author
+Page Sands — film photographer and AI-first GTM strategist. Charleston, SC.
+https://pagesands.com
