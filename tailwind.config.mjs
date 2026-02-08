@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
         sans: ['Geist Sans', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['Lora', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -29,10 +29,8 @@ export default {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
         },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
+        'footer-bg': 'hsl(var(--footer-bg))',
+        'footer-fg': 'hsl(var(--footer-fg))',
       },
       borderRadius: {
         lg: 'var(--radius)',

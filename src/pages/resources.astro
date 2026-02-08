@@ -36,38 +36,38 @@ const jsonLd = {
   jsonLd={jsonLd}
 >
   <!-- Hero -->
-  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
+  <section class="mx-auto max-w-5xl px-6 py-16 sm:py-24">
     <div class="max-w-3xl">
-      <p class="text-sm font-medium uppercase tracking-widest text-muted-foreground">Resources</p>
-      <h1 class="mt-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+      <p class="font-sans text-sm font-bold uppercase tracking-widest text-muted-foreground">Resources</p>
+      <h1 class="mt-4 font-sans text-4xl font-bold uppercase tracking-tight text-foreground sm:text-5xl">
         Articles &amp; Insights
       </h1>
-      <p class="mt-6 text-lg leading-relaxed text-muted-foreground">
+      <p class="mt-6 text-lg leading-relaxed">
         Frameworks, strategies, and practical guides on AI-first GTM, SEO, LLM optimization, and growing technology companies.
       </p>
     </div>
   </section>
 
   <!-- Articles List -->
-  <section class="border-t border-border">
-    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-      <div class="space-y-6">
+  <section class="border-t-[3px] border-accent">
+    <div class="mx-auto max-w-5xl px-6 py-16">
+      <div class="space-y-8">
         {articles.map((article) => (
           <a
             href={article.href}
-            class="block rounded-lg border border-border p-6 transition-colors hover:bg-muted/40"
+            class="group block border-b border-border pb-8"
           >
-            <div class="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-              <span>{article.date}</span>
+            <div class="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+              <span class="font-sans font-bold uppercase">{article.date}</span>
               {article.tags.map((tag) => (
-                <span class="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">
+                <span class="border border-border px-2.5 py-0.5 text-xs font-sans font-bold uppercase tracking-wide text-muted-foreground">
                   {tag}
                 </span>
               ))}
             </div>
-            <h2 class="mt-2 text-xl font-semibold text-foreground">{article.title}</h2>
-            <p class="mt-2 text-muted-foreground">{article.description}</p>
-            <span class="mt-3 inline-block text-sm font-medium text-foreground underline underline-offset-4">
+            <h2 class="mt-3 font-sans text-xl font-bold text-foreground group-hover:text-accent transition-colors">{article.title}</h2>
+            <p class="mt-2 text-base leading-relaxed text-muted-foreground">{article.description}</p>
+            <span class="gold-link mt-4 inline-block text-base font-medium">
               Read article &rarr;
             </span>
           </a>
